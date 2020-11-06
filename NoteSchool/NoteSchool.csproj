@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46F8173F-7F3C-4B80-83DF-7F5C5AD642D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NoteSchool</RootNamespace>
+    <AssemblyName>NoteSchool</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\schedule.cs" />
+    <Compile Include="Class\Start.cs" />
+    <Compile Include="DataBase\Conexion.cs" />
+    <Compile Include="Layout\ScInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScInfo.Designer.cs">
+      <DependentUpon>ScInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScStart.Designer.cs">
+      <DependentUpon>ScStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScTools.Designer.cs">
+      <DependentUpon>ScTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScClasses.Designer.cs">
+      <DependentUpon>ScClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScHome.Designer.cs">
+      <DependentUpon>ScHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScLoad.Designer.cs">
+      <DependentUpon>ScLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScLogin.Designer.cs">
+      <DependentUpon>ScLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ScSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\ScSignIn.Designer.cs">
+      <DependentUpon>ScSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Layout\ScInfo.resx">
+      <DependentUpon>ScInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScStart.resx">
+      <DependentUpon>ScStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScTools.resx">
+      <DependentUpon>ScTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScClasses.resx">
+      <DependentUpon>ScClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScHome.resx">
+      <DependentUpon>ScHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScLoad.resx">
+      <DependentUpon>ScLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScLogin.resx">
+      <DependentUpon>ScLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ScSignIn.resx">
+      <DependentUpon>ScSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\NoteSchool - icon.png" />
+    <None Include="Resources\NoteSchool-logo.png" />
+    <None Include="Resources\UserImage.png" />
+    <None Include="Resources\User1.png" />
+    <None Include="Resources\User.png" />
+    <None Include="Resources\Previous.png" />
+    <None Include="Resources\Power-button.png" />
+    <None Include="Resources\Open-book.png" />
+    <None Include="Resources\Notebook-standar.png" />
+    <None Include="Resources\Notebook.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\Information.png" />
+    <None Include="Resources\Image.png" />
+    <None Include="Resources\Forbidden.png" />
+    <None Include="Resources\Edit.png" />
+    <None Include="Resources\Documents.png" />
+    <None Include="Resources\Document.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Check.png" />
+    <None Include="Resources\Chat.png" />
+    <None Include="Resources\Calendar.png" />
+    <None Include="Resources\Calculator.png" />
+    <None Include="Resources\Briefcase.png" />
+    <None Include="Resources\Book-mark.png" />
+    <None Include="Resources\Book.png" />
+    <None Include="Resources\Bell.png" />
+    <None Include="Resources\Add-User.png" />
+    <None Include="Resources\Add-document.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
