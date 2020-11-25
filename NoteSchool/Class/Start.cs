@@ -7,9 +7,10 @@ using System.Windows.Forms;
 using NoteSchool.Layout;
 
 namespace NoteSchool {
-
+    
     //Clase para iniciar el main.
     class Start {
+
 
         //Main del programa.
         public static void Main() {
@@ -20,5 +21,7 @@ namespace NoteSchool {
             Application.Run(new ScLoad());
             
         }
+
+
     }
 }

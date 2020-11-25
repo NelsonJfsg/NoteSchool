@@ -8,14 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NoteSchool.Layout {
-    public partial class ScClasses : Form {
-        public ScClasses() {
+namespace NoteSchool.Layout.Tools {
+    public partial class ScCalculator : Form {
+        public ScCalculator() {
             InitializeComponent();
-        }
-
-        private void ScClasses_Load(object sender, EventArgs e) {
-
         }
     }
 }

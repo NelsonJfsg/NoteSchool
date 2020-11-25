@@ -20,7 +20,6 @@ namespace NoteSchool.Layout {
 
         //Codigo para activar el doble buffer
         protected override CreateParams CreateParams {
-
             get{
                 CreateParams handleparam = base.CreateParams;
                 handleparam.ExStyle |= 0x02000000;
@@ -33,57 +32,41 @@ namespace NoteSchool.Layout {
             Environment.Exit(0);
         }
 
-        private void label1_Click(object sender, EventArgs e) {
+        //Variables
+        public static ScInfo scInfo = new ScInfo();
+        public static ScClasses scClasses = new ScClasses();
+        public static ScTools scTools = new ScTools();
+        public static ScStart scStart = new ScStart();
+
+        //Metodo para abrir y cerrar los paneles.
+        public void openAndClose(Panel panel1, Form sc) {
             panel1.Controls.Clear();
-            ScClasses f2 = new ScClasses();
-            f2.TopLevel = false;
-            f2.TopMost = true;
-            panel1.Controls.Add(f2);
-            f2.Show();
+            sc.TopLevel = false;
+            sc.TopMost = true;
+            panel1.Controls.Add(sc);
+            sc.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e) {
-            
-            panel1.Controls.Clear();
-            ScTools scTools = new ScTools();
-
-            scTools.TopLevel = false;
-            scTools.TopMost = true;
-            panel1.Controls.Add(scTools);
-            scTools.Show();
+        //Eventos click para abrir los paneles.
+        private void lHome_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scStart);
         }
 
-        private void label1_Click_1(object sender, EventArgs e) {
-            panel1.Controls.Clear();
-            ScStart scStart = new ScStart();
-            
-            scStart.TopLevel = false;
-            scStart.TopMost = true;
-            panel1.Controls.Add(scStart);
-            scStart.Show();
+        private void lNotes_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scClasses);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e) {
-            
+        private void lTools_Click(object sender, EventArgs e) {
+            openAndClose(panel1,scTools);
+        }
+
+        private void pbInfo_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scInfo);
         }
 
         private void ScHome_Load(object sender, EventArgs e) {
-            ScStart scStart = new ScStart();
-
-            scStart.TopLevel = false;
-            scStart.TopMost = true;
-            panel1.Controls.Add(scStart);
-            scStart.Show();
+            openAndClose(panel1,scStart);
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e) {
-            panel1.Controls.Clear();
-            ScInfo scInfo = new ScInfo();
-            
-            scInfo.TopLevel = false;
-            scInfo.TopMost = true;
-            panel1.Controls.Add(scInfo);
-            scInfo.Show();
-        }
+        //Fin Eventos click.
     }
 }
