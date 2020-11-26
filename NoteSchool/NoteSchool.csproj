@@ -56,87 +56,105 @@
     <Compile Include="Class\schedule.cs" />
     <Compile Include="Class\Start.cs" />
     <Compile Include="DataBase\Conexion.cs" />
-    <Compile Include="Layout\ScInfo.cs">
+    <Compile Include="Layout\Horario\ScHorario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScInfo.Designer.cs">
+    <Compile Include="Layout\Horario\ScHorario.Designer.cs">
+      <DependentUpon>ScHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Informacion\ScInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Informacion\ScInfo.Designer.cs">
       <DependentUpon>ScInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScStart.cs">
+    <Compile Include="Layout\Principal\ScStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScStart.Designer.cs">
+    <Compile Include="Layout\Principal\ScStart.Designer.cs">
       <DependentUpon>ScStart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScTools.cs">
+    <Compile Include="Layout\Herramientas\ScTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScTools.Designer.cs">
+    <Compile Include="Layout\Herramientas\ScTools.Designer.cs">
       <DependentUpon>ScTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScClasses.cs">
+    <Compile Include="Layout\Notas\ScClasses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScClasses.Designer.cs">
+    <Compile Include="Layout\Notas\ScClasses.Designer.cs">
       <DependentUpon>ScClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScHome.cs">
+    <Compile Include="Layout\Principal\ScHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScHome.Designer.cs">
+    <Compile Include="Layout\Principal\ScHome.Designer.cs">
       <DependentUpon>ScHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScLoad.cs">
+    <Compile Include="Layout\Inicio\ScLoad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScLoad.Designer.cs">
+    <Compile Include="Layout\Inicio\ScLoad.Designer.cs">
       <DependentUpon>ScLoad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScLogin.cs">
+    <Compile Include="Layout\Inicio\ScLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScLogin.Designer.cs">
+    <Compile Include="Layout\Inicio\ScLogin.Designer.cs">
       <DependentUpon>ScLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\ScSignIn.cs">
+    <Compile Include="Layout\Inicio\ScSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\ScSignIn.Designer.cs">
+    <Compile Include="Layout\Inicio\ScSignIn.Designer.cs">
       <DependentUpon>ScSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layout\Tools\ScCalculator.cs">
+    <Compile Include="Layout\Herramientas\ScCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Layout\Tools\ScCalculator.Designer.cs">
+    <Compile Include="Layout\Herramientas\ScCalculator.Designer.cs">
       <DependentUpon>ScCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Tarea\ScTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Tarea\ScTarea.Designer.cs">
+      <DependentUpon>ScTarea.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Layout\ScInfo.resx">
+    <EmbeddedResource Include="Layout\Horario\ScHorario.resx">
+      <DependentUpon>ScHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Informacion\ScInfo.resx">
       <DependentUpon>ScInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScStart.resx">
+    <EmbeddedResource Include="Layout\Principal\ScStart.resx">
       <DependentUpon>ScStart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScTools.resx">
+    <EmbeddedResource Include="Layout\Herramientas\ScTools.resx">
       <DependentUpon>ScTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScClasses.resx">
+    <EmbeddedResource Include="Layout\Notas\ScClasses.resx">
       <DependentUpon>ScClasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScHome.resx">
+    <EmbeddedResource Include="Layout\Principal\ScHome.resx">
       <DependentUpon>ScHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScLoad.resx">
+    <EmbeddedResource Include="Layout\Inicio\ScLoad.resx">
       <DependentUpon>ScLoad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScLogin.resx">
+    <EmbeddedResource Include="Layout\Inicio\ScLogin.resx">
       <DependentUpon>ScLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\ScSignIn.resx">
+    <EmbeddedResource Include="Layout\Inicio\ScSignIn.resx">
       <DependentUpon>ScSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Layout\Tools\ScCalculator.resx">
+    <EmbeddedResource Include="Layout\Herramientas\ScCalculator.resx">
       <DependentUpon>ScCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Tarea\ScTarea.resx">
+      <DependentUpon>ScTarea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

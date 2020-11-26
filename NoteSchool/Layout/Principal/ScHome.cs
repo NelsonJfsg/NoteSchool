@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NoteSchool.Layout;
+using NoteSchool.Layout.Tarea;
+using NoteSchool.Layout.Horario;
 
 namespace NoteSchool.Layout {
 
@@ -32,12 +34,14 @@ namespace NoteSchool.Layout {
             Environment.Exit(0);
         }
 
-        //Variables
+        //Instancias para los layouts
         public static ScInfo scInfo = new ScInfo();
         public static ScClasses scClasses = new ScClasses();
         public static ScTools scTools = new ScTools();
         public static ScStart scStart = new ScStart();
-
+        public static ScTarea scTarea = new ScTarea();
+        public static ScHorario scHorario = new ScHorario();
+        
         //Metodo para abrir y cerrar los paneles.
         public void openAndClose(Panel panel1, Form sc) {
             panel1.Controls.Clear();
@@ -66,6 +70,14 @@ namespace NoteSchool.Layout {
 
         private void ScHome_Load(object sender, EventArgs e) {
             openAndClose(panel1,scStart);
+        }
+
+        private void lTareas_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scTarea);
+        }
+
+        private void lHorario_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scHorario);
         }
         //Fin Eventos click.
     }
