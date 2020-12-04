@@ -152,7 +152,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NoteSchool. v0.0.3";
+            this.Text = "NoteSchool. v0.0.3.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScHome_FormClosing);
             this.Load += new System.EventHandler(this.ScHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).EndInit();
