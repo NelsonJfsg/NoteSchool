@@ -56,11 +56,18 @@
     <Compile Include="Class\schedule.cs" />
     <Compile Include="Class\Start.cs" />
     <Compile Include="DataBase\Conexion.cs" />
+    <Compile Include="DataBase\Horario.cs" />
     <Compile Include="Layout\Horario\ScHorario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Layout\Horario\ScHorario.Designer.cs">
       <DependentUpon>ScHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Horario\ScRegistrarClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Horario\ScRegistrarClase.Designer.cs">
+      <DependentUpon>ScRegistrarClase.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\Informacion\ScInfo.cs">
       <SubType>Form</SubType>
@@ -125,6 +132,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Layout\Horario\ScHorario.resx">
       <DependentUpon>ScHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Horario\ScRegistrarClase.resx">
+      <DependentUpon>ScRegistrarClase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\Informacion\ScInfo.resx">
       <DependentUpon>ScInfo.cs</DependentUpon>
