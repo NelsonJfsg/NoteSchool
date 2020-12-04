@@ -81,5 +81,71 @@ namespace NoteSchool.DataBase {
 
         }
 
+        //Metodo para editar la clase.
+        public void editarClase(String id, Form Sc, String dia, TextBox tbMateria, TextBox tbHora, TextBox tbLink ) {
+            
+            //Variables
+            String tDia = dia;
+            String tId = id;
+            String materia = tbMateria.Text;
+            String hora = tbHora.Text;
+            String link = tbLink.Text;
+
+            //Comando de en que tabla insertar que datos.
+            String sql = "UPDATE horario_" + tDia + " SET Materia= '"+ materia + "', Hora='"+ hora + "', Aula='"+ link + "' WHERE idhorario_" + tDia + "='"+ tId + "'";
+
+            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
+            conexionBd.Open(); //Abrir conexion con la base de datos.
+
+            try {
+
+                //Aplicar comando para subir los datos.
+                MySqlCommand comando = new MySqlCommand(sql,conexionBd);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Clase actualizada.");
+                Sc.Dispose();
+
+            } catch (MySqlException er) {
+
+                MessageBox.Show(er.Message); //Mensaje de error.
+
+            } finally {
+
+                conexionBd.Close(); //Cerrar conexion con la base de datos.
+
+            }
+        }
+
+        //Metodo para eliminar la clase.
+        public void eliminarClase(string id, String dia) {
+            
+            //Variables
+            String tDia = dia;
+            String tId = id;
+
+            //Comando de en que tabla insertar que datos.
+            String sql = "DELETE FROM horario_" + tDia + " WHERE idhorario_" + tDia + "='"+ tId + "'";
+
+            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
+            conexionBd.Open(); //Abrir conexion con la base de datos.
+
+            try {
+
+                //Aplicar comando para subir los datos.
+                MySqlCommand comando = new MySqlCommand(sql,conexionBd);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Clase eliminada.");
+
+            } catch (MySqlException er) {
+
+                MessageBox.Show(er.Message); //Mensaje de error.
+
+            } finally {
+
+                conexionBd.Close(); //Cerrar conexion con la base de datos.
+
+            }
+        }
+
     }
 }

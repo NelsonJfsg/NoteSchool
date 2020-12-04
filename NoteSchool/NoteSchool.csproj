@@ -54,6 +54,12 @@
     <Compile Include="Class\Start.cs" />
     <Compile Include="DataBase\Conexion.cs" />
     <Compile Include="DataBase\Horario.cs" />
+    <Compile Include="Layout\Horario\ScEditarClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Horario\ScEditarClase.Designer.cs">
+      <DependentUpon>ScEditarClase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\Horario\ScHorario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
       <DependentUpon>ScTarea.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Layout\Horario\ScEditarClase.resx">
+      <DependentUpon>ScEditarClase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\Horario\ScHorario.resx">
       <DependentUpon>ScHorario.cs</DependentUpon>
     </EmbeddedResource>

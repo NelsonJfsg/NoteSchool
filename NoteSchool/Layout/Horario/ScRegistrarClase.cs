@@ -36,41 +36,12 @@ namespace NoteSchool.Layout.Horario {
 
             hr.crearClase(this, lDia.Text, tbMateria, tbHora, tbLink);
             
-            /*
-            //Variables
-            String materia = tbMateria.Text;
-            String hora = tbHora.Text;
-            String link = tbLink.Text;
-
-            //Comando de en que tabla insertar que datos.
-            String sql = "INSERT INTO horario_lunes (Materia, Hora, Aula) VALUES ('"+ materia + "', '" + hora + "', '"+ link + "')";
-
-            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
-            conexionBd.Open(); //Abrir conexion con la base de datos.
-
-            try {
-
-                //Aplicar comando para subir los datos.
-                MySqlCommand comando = new MySqlCommand(sql,conexionBd);
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Clase registrada.");
-                
-
-            } catch (MySqlException er) {
-
-                MessageBox.Show(er.Message); //Mensaje de error.
-
-            } finally {
-
-                conexionBd.Close(); //Cerrar conexion con la base de datos.
-                this.Dispose();
-            }
-            */
-            
         }
 
+        //Darle al lDia el valor del dia especifiacdo.
         private void ScRegistrarClase_Load(object sender, EventArgs e) {
             lDia.Text = dia;
         }
+    
     }
 }

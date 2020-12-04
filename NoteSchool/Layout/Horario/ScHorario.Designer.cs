@@ -36,6 +36,8 @@ namespace NoteSchool.Layout.Horario {
             this.viernesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sabadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.domingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.butEditarClase = new System.Windows.Forms.Button();
+            this.butEliminarClase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVHorario)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -162,12 +164,46 @@ namespace NoteSchool.Layout.Horario {
             this.domingoToolStripMenuItem.Text = "Domingo";
             this.domingoToolStripMenuItem.Click += new System.EventHandler(this.domingoToolStripMenuItem_Click);
             // 
+            // butEditarClase
+            // 
+            this.butEditarClase.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.butEditarClase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butEditarClase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butEditarClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEditarClase.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butEditarClase.ForeColor = System.Drawing.Color.White;
+            this.butEditarClase.Location = new System.Drawing.Point(320, 411);
+            this.butEditarClase.Name = "butEditarClase";
+            this.butEditarClase.Size = new System.Drawing.Size(161, 27);
+            this.butEditarClase.TabIndex = 10;
+            this.butEditarClase.Text = "Editar clase";
+            this.butEditarClase.UseVisualStyleBackColor = false;
+            this.butEditarClase.Click += new System.EventHandler(this.butEditarClase_Click);
+            // 
+            // butEliminarClase
+            // 
+            this.butEliminarClase.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.butEliminarClase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butEliminarClase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butEliminarClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butEliminarClase.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butEliminarClase.ForeColor = System.Drawing.Color.White;
+            this.butEliminarClase.Location = new System.Drawing.Point(144, 411);
+            this.butEliminarClase.Name = "butEliminarClase";
+            this.butEliminarClase.Size = new System.Drawing.Size(161, 27);
+            this.butEliminarClase.TabIndex = 11;
+            this.butEliminarClase.Text = "Eliminar clase";
+            this.butEliminarClase.UseVisualStyleBackColor = false;
+            this.butEliminarClase.Click += new System.EventHandler(this.butEliminarClase_Click);
+            // 
             // ScHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(672, 450);
+            this.Controls.Add(this.butEliminarClase);
+            this.Controls.Add(this.butEditarClase);
             this.Controls.Add(this.lDia);
             this.Controls.Add(this.dataGVHorario);
             this.Controls.Add(this.butRegistrarClase);
@@ -201,5 +237,7 @@ namespace NoteSchool.Layout.Horario {
         private System.Windows.Forms.ToolStripMenuItem viernesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sabadoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem domingoToolStripMenuItem;
+        private System.Windows.Forms.Button butEditarClase;
+        private System.Windows.Forms.Button butEliminarClase;
     }
 }

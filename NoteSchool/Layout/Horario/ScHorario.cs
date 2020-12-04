@@ -91,5 +91,29 @@ namespace NoteSchool.Layout.Horario {
 
         }
 
+        //Evento click para mostrar el layout de editar clase.
+        private void butEditarClase_Click(object sender, EventArgs e) {
+
+            //Objeto
+            ScEditarClase scEditarClase = new ScEditarClase();
+
+            //Obtener el id del dia.
+            String id = dataGVHorario.CurrentRow.Cells["idhorario_" + lDia.Text].Value.ToString();
+            
+            //Metodo para settear el parametro dia y el id.
+            scEditarClase.setDia(lDia.Text);
+            scEditarClase.setId(id);
+
+            scEditarClase.Show(); //Mostrar el form para editar.
+        }
+
+        //Evento click para eliminar la clase.
+        private void butEliminarClase_Click(object sender, EventArgs e) {
+
+            String id = dataGVHorario.CurrentRow.Cells["idhorario_" + lDia.Text].Value.ToString();
+            hr.eliminarClase(id, lDia.Text);
+
+        }
+    
     }
 }
