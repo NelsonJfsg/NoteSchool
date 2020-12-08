@@ -38,6 +38,7 @@ namespace NoteSchool.Layout.Horario {
             this.domingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.butEditarClase = new System.Windows.Forms.Button();
             this.butEliminarClase = new System.Windows.Forms.Button();
+            this.butActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVHorario)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,11 +72,14 @@ namespace NoteSchool.Layout.Horario {
             // 
             // dataGVHorario
             // 
+            this.dataGVHorario.AllowUserToResizeColumns = false;
+            this.dataGVHorario.AllowUserToResizeRows = false;
             this.dataGVHorario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.dataGVHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGVHorario.GridColor = System.Drawing.Color.White;
             this.dataGVHorario.Location = new System.Drawing.Point(12, 94);
             this.dataGVHorario.Name = "dataGVHorario";
+            this.dataGVHorario.ReadOnly = true;
             this.dataGVHorario.Size = new System.Drawing.Size(637, 298);
             this.dataGVHorario.TabIndex = 7;
             this.dataGVHorario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVHorario_CellDoubleClick);
@@ -87,9 +91,9 @@ namespace NoteSchool.Layout.Horario {
             this.lDia.ForeColor = System.Drawing.Color.White;
             this.lDia.Location = new System.Drawing.Point(12, 55);
             this.lDia.Name = "lDia";
-            this.lDia.Size = new System.Drawing.Size(64, 25);
+            this.lDia.Size = new System.Drawing.Size(59, 25);
             this.lDia.TabIndex = 8;
-            this.lDia.Text = "Lunes";
+            this.lDia.Text = "lunes";
             // 
             // menuStrip1
             // 
@@ -104,63 +108,70 @@ namespace NoteSchool.Layout.Horario {
             this.domingoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(672, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(672, 25);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // lunesToolStripMenuItem
             // 
+            this.lunesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lunesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lunesToolStripMenuItem.Name = "lunesToolStripMenuItem";
-            this.lunesToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.lunesToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
             this.lunesToolStripMenuItem.Text = "lunes";
             this.lunesToolStripMenuItem.Click += new System.EventHandler(this.lunesToolStripMenuItem_Click);
             // 
             // martesToolStripMenuItem
             // 
+            this.martesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.martesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.martesToolStripMenuItem.Name = "martesToolStripMenuItem";
-            this.martesToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.martesToolStripMenuItem.Size = new System.Drawing.Size(62, 21);
             this.martesToolStripMenuItem.Text = "Martes";
             this.martesToolStripMenuItem.Click += new System.EventHandler(this.martesToolStripMenuItem_Click);
             // 
             // miercolesToolStripMenuItem
             // 
+            this.miercolesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.miercolesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.miercolesToolStripMenuItem.Name = "miercolesToolStripMenuItem";
-            this.miercolesToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.miercolesToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
             this.miercolesToolStripMenuItem.Text = "Miercoles";
             this.miercolesToolStripMenuItem.Click += new System.EventHandler(this.miercolesToolStripMenuItem_Click);
             // 
             // sabadoToolStripMenuItem
             // 
+            this.sabadoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sabadoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.sabadoToolStripMenuItem.Name = "sabadoToolStripMenuItem";
-            this.sabadoToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.sabadoToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.sabadoToolStripMenuItem.Text = "Jueves";
             this.sabadoToolStripMenuItem.Click += new System.EventHandler(this.sabadoToolStripMenuItem_Click);
             // 
             // viernesToolStripMenuItem
             // 
+            this.viernesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viernesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.viernesToolStripMenuItem.Name = "viernesToolStripMenuItem";
-            this.viernesToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.viernesToolStripMenuItem.Size = new System.Drawing.Size(66, 21);
             this.viernesToolStripMenuItem.Text = "Viernes";
             this.viernesToolStripMenuItem.Click += new System.EventHandler(this.viernesToolStripMenuItem_Click);
             // 
             // sabadoToolStripMenuItem1
             // 
+            this.sabadoToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sabadoToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.sabadoToolStripMenuItem1.Name = "sabadoToolStripMenuItem1";
-            this.sabadoToolStripMenuItem1.Size = new System.Drawing.Size(58, 20);
+            this.sabadoToolStripMenuItem1.Size = new System.Drawing.Size(65, 21);
             this.sabadoToolStripMenuItem1.Text = "Sabado";
             this.sabadoToolStripMenuItem1.Click += new System.EventHandler(this.sabadoToolStripMenuItem1_Click);
             // 
             // domingoToolStripMenuItem
             // 
+            this.domingoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domingoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.domingoToolStripMenuItem.Name = "domingoToolStripMenuItem";
-            this.domingoToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.domingoToolStripMenuItem.Size = new System.Drawing.Size(78, 21);
             this.domingoToolStripMenuItem.Text = "Domingo";
             this.domingoToolStripMenuItem.Click += new System.EventHandler(this.domingoToolStripMenuItem_Click);
             // 
@@ -196,12 +207,29 @@ namespace NoteSchool.Layout.Horario {
             this.butEliminarClase.UseVisualStyleBackColor = false;
             this.butEliminarClase.Click += new System.EventHandler(this.butEliminarClase_Click);
             // 
+            // butActualizar
+            // 
+            this.butActualizar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.butActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butActualizar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butActualizar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butActualizar.ForeColor = System.Drawing.Color.White;
+            this.butActualizar.Location = new System.Drawing.Point(12, 411);
+            this.butActualizar.Name = "butActualizar";
+            this.butActualizar.Size = new System.Drawing.Size(116, 27);
+            this.butActualizar.TabIndex = 12;
+            this.butActualizar.Text = "Actualizar";
+            this.butActualizar.UseVisualStyleBackColor = false;
+            this.butActualizar.Click += new System.EventHandler(this.butActualizar_Click);
+            // 
             // ScHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(672, 450);
+            this.Controls.Add(this.butActualizar);
             this.Controls.Add(this.butEliminarClase);
             this.Controls.Add(this.butEditarClase);
             this.Controls.Add(this.lDia);
@@ -239,5 +267,6 @@ namespace NoteSchool.Layout.Horario {
         private System.Windows.Forms.ToolStripMenuItem domingoToolStripMenuItem;
         private System.Windows.Forms.Button butEditarClase;
         private System.Windows.Forms.Button butEliminarClase;
+        private System.Windows.Forms.Button butActualizar;
     }
 }

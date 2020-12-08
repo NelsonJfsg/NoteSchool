@@ -20,6 +20,8 @@ namespace NoteSchool.DataBase {
             dataGridView.ForeColor = Color.White;
             dataGridView.BackgroundColor = Color.FromArgb(21,21,21);
             dataGridView.DefaultCellStyle.BackColor = Color.FromArgb(21,21,21);
+            dataGridView.AllowUserToResizeColumns = false;
+            dataGridView.AllowUserToResizeRows = false;
 
             MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
             conexionBd.Open(); //Abrir conexion con la base de datos.
@@ -35,6 +37,9 @@ namespace NoteSchool.DataBase {
 
             DataGridViewColumn Column = dataGridView.Columns[0]; //guarda la primer columna.  
             Column.Visible = false; //Evita que se muestre la primer columna.
+
+            DataGridViewColumn cLink = dataGridView.Columns[3];
+            cLink.Width = 395;
 
         }
         

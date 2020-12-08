@@ -24,6 +24,7 @@ namespace NoteSchool.Layout.Horario {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScRegistrarClase));
             this.label2 = new System.Windows.Forms.Label();
             this.tbMateria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@ namespace NoteSchool.Layout.Horario {
             this.tbMateria.Name = "tbMateria";
             this.tbMateria.Size = new System.Drawing.Size(174, 20);
             this.tbMateria.TabIndex = 2;
+            this.tbMateria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -82,6 +84,7 @@ namespace NoteSchool.Layout.Horario {
             this.tbHora.Name = "tbHora";
             this.tbHora.Size = new System.Drawing.Size(174, 20);
             this.tbHora.TabIndex = 5;
+            this.tbHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbLink
             // 
@@ -89,6 +92,7 @@ namespace NoteSchool.Layout.Horario {
             this.tbLink.Name = "tbLink";
             this.tbLink.Size = new System.Drawing.Size(174, 20);
             this.tbLink.TabIndex = 6;
+            this.tbLink.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // butRegistrarClase
             // 
@@ -98,7 +102,7 @@ namespace NoteSchool.Layout.Horario {
             this.butRegistrarClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butRegistrarClase.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butRegistrarClase.ForeColor = System.Drawing.Color.White;
-            this.butRegistrarClase.Location = new System.Drawing.Point(97, 370);
+            this.butRegistrarClase.Location = new System.Drawing.Point(106, 370);
             this.butRegistrarClase.Name = "butRegistrarClase";
             this.butRegistrarClase.Size = new System.Drawing.Size(161, 27);
             this.butRegistrarClase.TabIndex = 8;
@@ -119,11 +123,11 @@ namespace NoteSchool.Layout.Horario {
             // lDia
             // 
             this.lDia.AutoSize = true;
-            this.lDia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDia.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDia.ForeColor = System.Drawing.Color.White;
-            this.lDia.Location = new System.Drawing.Point(190, 91);
+            this.lDia.Location = new System.Drawing.Point(198, 89);
             this.lDia.Name = "lDia";
-            this.lDia.Size = new System.Drawing.Size(36, 21);
+            this.lDia.Size = new System.Drawing.Size(60, 37);
             this.lDia.TabIndex = 10;
             this.lDia.Text = "Dia";
             // 
@@ -143,9 +147,10 @@ namespace NoteSchool.Layout.Horario {
             this.Controls.Add(this.tbMateria);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScRegistrarClase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ScRegistrarClase";
+            this.Text = "Registra una clase";
             this.Load += new System.EventHandler(this.ScRegistrarClase_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

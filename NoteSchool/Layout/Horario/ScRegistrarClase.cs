@@ -24,6 +24,7 @@ namespace NoteSchool.Layout.Horario {
 
         //Objetos.
         DataBase.Horario hr = new DataBase.Horario();
+        ScHorario scHorario = new ScHorario();
         
         //setDia
         public String setDia(String text) {

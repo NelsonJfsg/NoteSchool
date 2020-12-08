@@ -41,5 +41,10 @@ namespace NoteSchool.Layout.Horario {
             hr.editarClase(id, this, dia, tbMateria, tbHora, tbLink);
 
         }
+
+        //Metodo para cargar los datos en los TextBox.
+        private void ScEditarClase_Load(object sender, EventArgs e) {
+            lDia.Text = dia;
+        }
     }
 }
