@@ -54,6 +54,7 @@
     <Compile Include="Class\Start.cs" />
     <Compile Include="DataBase\Conexion.cs" />
     <Compile Include="DataBase\Horario.cs" />
+    <Compile Include="DataBase\Nota.cs" />
     <Compile Include="Layout\Horario\ScEditarClase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,12 @@
     </Compile>
     <Compile Include="Layout\Informacion\ScInfo.Designer.cs">
       <DependentUpon>ScInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Notas\ScNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Notas\ScNotas.Designer.cs">
+      <DependentUpon>ScNotas.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\Principal\ScStart.cs">
       <SubType>Form</SubType>
@@ -145,6 +152,9 @@
     <EmbeddedResource Include="Layout\Informacion\ScInfo.resx">
       <DependentUpon>ScInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Notas\ScNotas.resx">
+      <DependentUpon>ScNotas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\Principal\ScStart.resx">
       <DependentUpon>ScStart.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\NoteSchool - icon.png" />
+    <None Include="Resources\actualizar.png" />
     <None Include="Resources\NoteSchool-logo.png" />
     <None Include="Resources\UserImage.png" />
     <None Include="Resources\User1.png" />
