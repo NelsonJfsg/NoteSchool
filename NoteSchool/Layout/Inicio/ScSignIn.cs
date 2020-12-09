@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NoteSchool.Layout {
+
     public partial class ScSignIn : Form {
 
         //Variables globales.
@@ -106,5 +107,6 @@ namespace NoteSchool.Layout {
                 tbPassword.ForeColor = Color.White;
             }
         }
+    
     }
 }

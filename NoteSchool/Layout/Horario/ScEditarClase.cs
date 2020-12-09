@@ -10,7 +10,19 @@ using System.Windows.Forms;
 using NoteSchool.DataBase;
 
 namespace NoteSchool.Layout.Horario {
+
     public partial class ScEditarClase : Form {
+
+        //Codigo para activar el doble buffer
+        protected override CreateParams CreateParams {
+            get{
+                CreateParams handleparam = base.CreateParams;
+                handleparam.ExStyle |= 0x02000000;
+                return handleparam;
+            }
+        }
+
+        //Constructor
         public ScEditarClase() {
             InitializeComponent();
         }
@@ -46,5 +58,6 @@ namespace NoteSchool.Layout.Horario {
         private void ScEditarClase_Load(object sender, EventArgs e) {
             lDia.Text = dia;
         }
+    
     }
 }

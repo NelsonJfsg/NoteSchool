@@ -99,5 +99,6 @@ namespace NoteSchool.Layout {
         private void ScLogin_Load(object sender, EventArgs e) {
             this.ActiveControl = lTittle;
         }
+    
     }
 }

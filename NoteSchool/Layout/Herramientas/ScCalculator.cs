@@ -10,8 +10,20 @@ using System.Windows.Forms;
 
 namespace NoteSchool.Layout.Tools {
     public partial class ScCalculator : Form {
+
+        //Codigo para activar el doble buffer
+        protected override CreateParams CreateParams {
+            get{
+                CreateParams handleparam = base.CreateParams;
+                handleparam.ExStyle |= 0x02000000;
+                return handleparam;
+            }
+        }
+
+        //Constructor.
         public ScCalculator() {
             InitializeComponent();
         }
+    
     }
 }
