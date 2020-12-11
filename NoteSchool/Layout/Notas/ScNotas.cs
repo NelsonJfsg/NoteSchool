@@ -46,9 +46,28 @@ namespace NoteSchool.Layout.Notas {
             return estado;
         }
 
-        //Evento click para guardar la nota.
-        private void butGuardarNota_Click(object sender, EventArgs e) {
+        //Evento load para abrir la nota.
+        private void ScNotas_Load(object sender, EventArgs e) {
 
+            if (tEstado == true) {
+       
+                Nota nota = new Nota();
+                nota.abrirNota(id, tbTitulo, tbFecha, rtCuerpo);
+
+            }
+
+        }
+
+        //Evento closing para guardar el valor al estado.
+        private void ScNotas_FormClosing(object sender, FormClosingEventArgs e) {
+
+            setEstado(false);
+
+        }
+        
+        //Evento click para guardar la nota.
+        private void butGuardarNota_Click_1(object sender, EventArgs e) {
+            
             //Verificamos que el estado sea verdadero para crear la nota.
             if (tEstado != true) {
                 
@@ -70,25 +89,6 @@ namespace NoteSchool.Layout.Notas {
 
                 }
             }
-
-        }
-
-        //Evento load para abrir la nota.
-        private void ScNotas_Load(object sender, EventArgs e) {
-
-            if (tEstado == true) {
-       
-                Nota nota = new Nota();
-                nota.abrirNota(id, tbTitulo, tbFecha, rtCuerpo);
-
-            }
-
-        }
-
-        //Evento closing para guardar el valor al estado.
-        private void ScNotas_FormClosing(object sender, FormClosingEventArgs e) {
-
-            setEstado(false);
 
         }
 

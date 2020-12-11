@@ -24,6 +24,7 @@ namespace NoteSchool.Layout.Notas {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScNotas));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbTitulo = new System.Windows.Forms.TextBox();
@@ -96,13 +97,19 @@ namespace NoteSchool.Layout.Notas {
             // 
             // butGuardarNota
             // 
-            this.butGuardarNota.Location = new System.Drawing.Point(710, 404);
+            this.butGuardarNota.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.butGuardarNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butGuardarNota.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.butGuardarNota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butGuardarNota.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butGuardarNota.ForeColor = System.Drawing.Color.White;
+            this.butGuardarNota.Location = new System.Drawing.Point(627, 402);
             this.butGuardarNota.Name = "butGuardarNota";
-            this.butGuardarNota.Size = new System.Drawing.Size(78, 23);
-            this.butGuardarNota.TabIndex = 6;
+            this.butGuardarNota.Size = new System.Drawing.Size(161, 27);
+            this.butGuardarNota.TabIndex = 17;
             this.butGuardarNota.Text = "Guardar nota";
-            this.butGuardarNota.UseVisualStyleBackColor = true;
-            this.butGuardarNota.Click += new System.EventHandler(this.butGuardarNota_Click);
+            this.butGuardarNota.UseVisualStyleBackColor = false;
+            this.butGuardarNota.Click += new System.EventHandler(this.butGuardarNota_Click_1);
             // 
             // ScNotas
             // 
@@ -117,8 +124,10 @@ namespace NoteSchool.Layout.Notas {
             this.Controls.Add(this.tbTitulo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScNotas";
-            this.Text = "ScNotas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Editor de notas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScNotas_FormClosing);
             this.Load += new System.EventHandler(this.ScNotas_Load);
             this.ResumeLayout(false);

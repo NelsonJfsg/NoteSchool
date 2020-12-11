@@ -54,6 +54,7 @@
     <Compile Include="DataBase\Conexion.cs" />
     <Compile Include="DataBase\Horario.cs" />
     <Compile Include="DataBase\Nota.cs" />
+    <Compile Include="DataBase\Tarea.cs" />
     <Compile Include="DataBase\Usuario.cs" />
     <Compile Include="Layout\Horario\ScEditarClase.cs">
       <SubType>Form</SubType>
@@ -139,6 +140,12 @@
     <Compile Include="Layout\Tarea\ScTarea.Designer.cs">
       <DependentUpon>ScTarea.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\Tarea\ScVerTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Tarea\ScVerTarea.Designer.cs">
+      <DependentUpon>ScVerTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Layout\Horario\ScEditarClase.resx">
       <DependentUpon>ScEditarClase.cs</DependentUpon>
@@ -181,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\Tarea\ScTarea.resx">
       <DependentUpon>ScTarea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Tarea\ScVerTarea.resx">
+      <DependentUpon>ScVerTarea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

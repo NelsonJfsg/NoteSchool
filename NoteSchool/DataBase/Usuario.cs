@@ -64,6 +64,7 @@ namespace NoteSchool.DataBase {
             
             MySqlDataReader lec = com.ExecuteReader(); //Reader de la base de datos.
 
+            
             //Condicion para ver si hay algun dato leido.
             if (lec.Read() == true) {
 
@@ -72,16 +73,21 @@ namespace NoteSchool.DataBase {
 
                 //Verificamos que los datos esten correctos.
                 if (userName == bdUserName && password == bdPassword) {
-                    
+
+                    conexionBd.Close(); //Cerramos la base de datos.
                     scL.Dispose(); //Cerramos el login 
                     scH.Show(); //Abrimos el home.
-                    conexionBd.Close(); //Cerramos la base de datos.
 
                 } else {
                     
-                    MessageBox.Show("Usuario y contraseña no coinciden.");
+                    MessageBox.Show("Usuario y contraseña no coinciden."); //Contraseña incorrecta
                 
                 }
+
+            } else {
+
+                MessageBox.Show("Usuario no registrado."); //Usuario sin registrar.
+
             }
 
         }
