@@ -154,6 +154,7 @@ namespace NoteSchool.DataBase {
 
         }
 
+        //Editamos la tarea seleccionada.
         public void editarTarea(String id, TextBox tbTitulo, TextBox tbFechaDeEntrega, RichTextBox rtDescripcion, ComboBox cbEstado) {
 
             //Variables
@@ -188,10 +189,6 @@ namespace NoteSchool.DataBase {
 
 
         }
-
-
-
-
 
     }
 }
