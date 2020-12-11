@@ -54,6 +54,7 @@
     <Compile Include="DataBase\Conexion.cs" />
     <Compile Include="DataBase\Horario.cs" />
     <Compile Include="DataBase\Nota.cs" />
+    <Compile Include="DataBase\Usuario.cs" />
     <Compile Include="Layout\Horario\ScEditarClase.cs">
       <SubType>Form</SubType>
     </Compile>

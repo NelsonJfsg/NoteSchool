@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using NoteSchool.DataBase;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,34 +35,13 @@ namespace NoteSchool.Layout {
         //Guardar el usuario en la base de datos.
         private void butSignIn_Click(object sender, EventArgs e) {
 
-            //Variables
-            String userName = tbUserName.Text;
-            String userPassword = tbPassword.Text;
+            //Objetos
+            Usuario usario = new Usuario();
+            ScLogin scLogin = new ScLogin();
 
-            //Comando de en que tabla insertar que datos.
-            String sql = "INSERT INTO users (userName, userpassword) VALUES ('"+ userName + "', '" + userPassword + "')";
-
-            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
-            conexionBd.Open(); //Abrir conexion con la base de datos.
-
-            try {
-
-                //Aplicar comando para subir los datos.
-                MySqlCommand comando = new MySqlCommand(sql,conexionBd);
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Usuario registrado.");
-                this.Visible = false;
-                ScLogin scLogin = new ScLogin();
-                scLogin.Show();
-
-            } catch (MySqlException er) {
-
-                MessageBox.Show(er.Message); //Mensaje de error.
-
-            } finally {
-
-                conexionBd.Close(); //Cerrar conexion con la base de datos.
-            }
+            //Guardar usuario en la base de datos.
+            usario.validarUsuarioExistente(this, scLogin, tbUserName, tbPassword);
+            
         }
 
         //Regresar a el login.

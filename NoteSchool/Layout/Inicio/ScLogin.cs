@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using NoteSchool.DataBase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,19 +74,12 @@ namespace NoteSchool.Layout {
         //Verificar usuario y contraseña.
         private void butLogin_Click(object sender, EventArgs e) {
 
-            //Variables
-            String userName = tbUserName.Text;
-            String password = tbPassword.Text;
-
-            if (userName == password) {
-                this.Dispose();
-                ScHome scHome = new ScHome();
-                scHome.Show();
-            } else {
-                if (userName != password) {
-                    MessageBox.Show("El usuario y la contraseña deben ser iguales.\n" + "Ejemplo: \n" + "usuario = 1\n" + "contraseña = 1");
-                }
-            }
+            //Objetos
+            Usuario usuario = new Usuario();
+            ScHome scHome = new ScHome();
+            
+            //Metodo para validar la contraseña y el usuario.
+            usuario.validarUsuario(this, scHome, tbUserName, tbPassword);
 
         }
 
