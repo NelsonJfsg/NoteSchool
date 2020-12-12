@@ -39,7 +39,7 @@ namespace NoteSchool.Layout.Notas {
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 21);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace NoteSchool.Layout.Notas {
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(339, 9);
+            this.label2.Location = new System.Drawing.Point(339, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 21);
             this.label2.TabIndex = 1;
@@ -59,19 +59,21 @@ namespace NoteSchool.Layout.Notas {
             // tbTitulo
             // 
             this.tbTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.tbTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTitulo.ForeColor = System.Drawing.Color.White;
             this.tbTitulo.Location = new System.Drawing.Point(78, 13);
             this.tbTitulo.Name = "tbTitulo";
-            this.tbTitulo.Size = new System.Drawing.Size(255, 20);
+            this.tbTitulo.Size = new System.Drawing.Size(255, 25);
             this.tbTitulo.TabIndex = 2;
             // 
             // tbFecha
             // 
             this.tbFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.tbFecha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFecha.ForeColor = System.Drawing.Color.White;
             this.tbFecha.Location = new System.Drawing.Point(403, 13);
             this.tbFecha.Name = "tbFecha";
-            this.tbFecha.Size = new System.Drawing.Size(255, 20);
+            this.tbFecha.Size = new System.Drawing.Size(255, 25);
             this.tbFecha.TabIndex = 3;
             // 
             // label3
@@ -91,7 +93,7 @@ namespace NoteSchool.Layout.Notas {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtCuerpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rtCuerpo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtCuerpo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtCuerpo.ForeColor = System.Drawing.Color.White;
             this.rtCuerpo.Location = new System.Drawing.Point(16, 88);
             this.rtCuerpo.Name = "rtCuerpo";

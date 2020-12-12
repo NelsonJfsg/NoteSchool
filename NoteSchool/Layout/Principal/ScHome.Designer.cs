@@ -50,7 +50,7 @@
             this.lTools.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lTools.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTools.ForeColor = System.Drawing.Color.White;
-            this.lTools.Location = new System.Drawing.Point(14, 289);
+            this.lTools.Location = new System.Drawing.Point(10, 289);
             this.lTools.Name = "lTools";
             this.lTools.Size = new System.Drawing.Size(113, 21);
             this.lTools.TabIndex = 12;
@@ -64,7 +64,7 @@
             this.lHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lHome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lHome.ForeColor = System.Drawing.Color.White;
-            this.lHome.Location = new System.Drawing.Point(28, 9);
+            this.lHome.Location = new System.Drawing.Point(26, 18);
             this.lHome.Name = "lHome";
             this.lHome.Size = new System.Drawing.Size(83, 32);
             this.lHome.TabIndex = 13;
@@ -100,7 +100,7 @@
             this.lNotes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lNotes.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNotes.ForeColor = System.Drawing.Color.White;
-            this.lNotes.Location = new System.Drawing.Point(28, 107);
+            this.lNotes.Location = new System.Drawing.Point(25, 107);
             this.lNotes.Name = "lNotes";
             this.lNotes.Size = new System.Drawing.Size(82, 32);
             this.lNotes.TabIndex = 10;
@@ -114,7 +114,7 @@
             this.lTareas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lTareas.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTareas.ForeColor = System.Drawing.Color.White;
-            this.lTareas.Location = new System.Drawing.Point(24, 163);
+            this.lTareas.Location = new System.Drawing.Point(23, 163);
             this.lTareas.Name = "lTareas";
             this.lTareas.Size = new System.Drawing.Size(87, 32);
             this.lTareas.TabIndex = 15;
@@ -128,7 +128,7 @@
             this.lHorario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lHorario.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lHorario.ForeColor = System.Drawing.Color.White;
-            this.lHorario.Location = new System.Drawing.Point(22, 223);
+            this.lHorario.Location = new System.Drawing.Point(15, 223);
             this.lHorario.Name = "lHorario";
             this.lHorario.Size = new System.Drawing.Size(103, 32);
             this.lHorario.TabIndex = 16;
@@ -152,7 +152,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NoteSchool. v0.7";
+            this.Text = "NoteSchool. v0.8";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScHome_FormClosing);
             this.Load += new System.EventHandler(this.ScHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).EndInit();

@@ -39,6 +39,7 @@ namespace NoteSchool.Layout.Tarea {
             // rtDescripcion
             // 
             this.rtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.rtDescripcion.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtDescripcion.ForeColor = System.Drawing.Color.White;
             this.rtDescripcion.Location = new System.Drawing.Point(16, 133);
             this.rtDescripcion.Name = "rtDescripcion";
@@ -60,19 +61,21 @@ namespace NoteSchool.Layout.Tarea {
             // tbFechaDeEntrega
             // 
             this.tbFechaDeEntrega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.tbFechaDeEntrega.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFechaDeEntrega.ForeColor = System.Drawing.Color.White;
             this.tbFechaDeEntrega.Location = new System.Drawing.Point(162, 61);
             this.tbFechaDeEntrega.Name = "tbFechaDeEntrega";
-            this.tbFechaDeEntrega.Size = new System.Drawing.Size(255, 20);
+            this.tbFechaDeEntrega.Size = new System.Drawing.Size(255, 25);
             this.tbFechaDeEntrega.TabIndex = 10;
             // 
             // tbTitulo
             // 
             this.tbTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.tbTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTitulo.ForeColor = System.Drawing.Color.White;
             this.tbTitulo.Location = new System.Drawing.Point(78, 20);
             this.tbTitulo.Name = "tbTitulo";
-            this.tbTitulo.Size = new System.Drawing.Size(255, 20);
+            this.tbTitulo.Size = new System.Drawing.Size(255, 25);
             this.tbTitulo.TabIndex = 9;
             // 
             // label2
@@ -80,7 +83,7 @@ namespace NoteSchool.Layout.Tarea {
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(12, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 21);
             this.label2.TabIndex = 8;
@@ -91,7 +94,7 @@ namespace NoteSchool.Layout.Tarea {
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 21);
             this.label1.TabIndex = 7;
@@ -102,7 +105,7 @@ namespace NoteSchool.Layout.Tarea {
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(16, 315);
+            this.label4.Location = new System.Drawing.Point(16, 318);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 21);
             this.label4.TabIndex = 14;
@@ -111,15 +114,17 @@ namespace NoteSchool.Layout.Tarea {
             // cbEstado
             // 
             this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.cbEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstado.ForeColor = System.Drawing.Color.White;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "Completada.",
             "Sin completar."});
-            this.cbEstado.Location = new System.Drawing.Point(88, 314);
+            this.cbEstado.Location = new System.Drawing.Point(87, 318);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cbEstado.Size = new System.Drawing.Size(121, 23);
             this.cbEstado.TabIndex = 15;
+            this.cbEstado.Text = "Sin completar.";
             // 
             // butGuardarTarea
             // 

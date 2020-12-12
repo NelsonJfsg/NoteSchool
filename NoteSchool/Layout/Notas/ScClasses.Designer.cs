@@ -56,6 +56,7 @@
             this.dataGVNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVNotas.Location = new System.Drawing.Point(18, 53);
             this.dataGVNotas.Name = "dataGVNotas";
+            this.dataGVNotas.ReadOnly = true;
             this.dataGVNotas.RowHeadersVisible = false;
             this.dataGVNotas.Size = new System.Drawing.Size(632, 227);
             this.dataGVNotas.TabIndex = 8;

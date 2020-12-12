@@ -51,6 +51,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGVHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGVHorario.ColumnHeadersHeight = 21;
+            this.dataGVHorario.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGVHorario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.dataGVHorario.Location = new System.Drawing.Point(17, 235);
             this.dataGVHorario.Name = "dataGVHorario";
