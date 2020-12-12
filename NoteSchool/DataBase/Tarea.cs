@@ -13,6 +13,13 @@ namespace NoteSchool.DataBase {
 
     class Tarea {
 
+        //Estilo de color.
+        public void colorStyle(DataGridView dataGridView) {
+
+            dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31,31,31);
+            dataGridView.GridColor = Color.FromArgb(41, 41, 41);
+        }
+
         //Variables
         public String id;
 
@@ -63,6 +70,8 @@ namespace NoteSchool.DataBase {
         //Muestra las tareas en un DataGridView.
         public void cargarTarea(DataGridView dataGridView) {
             
+            colorStyle(dataGridView); //Estilo para el DGV.
+
             dataGridView.AllowUserToAddRows = false; //Desactva añadir una fila.
             
             //Estilo de texto para la tabla.
@@ -188,6 +197,41 @@ namespace NoteSchool.DataBase {
             }
 
 
+        }
+
+        //Cargar solo las tareas sin terminar.
+        public void cargarTareaIncompleta(DataGridView dataGridView) {
+
+            dataGridView.AllowUserToAddRows = false; //Desactva añadir una fila.
+            
+            //Estilo de texto para la tabla.
+            dataGridView.ForeColor = Color.White;
+            dataGridView.BackgroundColor = Color.FromArgb(21,21,21);
+            dataGridView.DefaultCellStyle.BackColor = Color.FromArgb(21,21,21);
+            dataGridView.AllowUserToResizeColumns = false;
+            dataGridView.AllowUserToResizeRows = false;
+
+            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
+            conexionBd.Open(); //Abrir conexion con la base de datos.
+
+            //Comando para recuperar los datos de la bd.
+            MySqlCommand cm = new MySqlCommand("SELECT * FROM bduser." + "tareas " + "WHERE Estado='" + "Sin completar." + "'" + ";", conexionBd);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cm); //Adapta los datos.
+            DataTable dt = new DataTable(); //Convierte los datos en tabla
+            da.Fill(dt); //Llena la tabla.
+
+            dataGridView.DataSource = dt; //Asigna al DGV la fuente de datos.
+
+            DataGridViewColumn Column = dataGridView.Columns[0]; //guarda la primer columna.  
+            Column.Visible = false; //Evita que se muestre la primer columna.
+
+            DataGridViewColumn cDescripcion = dataGridView.Columns[2]; //guardamos la columna del cuerpo.
+            cDescripcion.Width = 291; //Ancho de la celda para el cuerpo.
+
+            DataGridViewColumn cFecha = dataGridView.Columns[3]; //guardamos la columna del cuerpo.
+            cFecha.Width = 120; //Ancho de la celda para el cuerpo.
+            cFecha.HeaderText = "Fecha de entrega";
         }
 
     }

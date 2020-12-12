@@ -33,7 +33,10 @@ namespace NoteSchool.Layout {
         //Evento load para cargar las notas en el DGV.
         private void ScClasses_Load(object sender, EventArgs e) {
 
-            nota.cargarNotas(dataGVNotas);
+            nota.cargarNotas(dataGVNotas); //Cargamos las notas en el DGV.
+
+            DataGridViewColumn cTitulo = dataGVNotas.Columns[1];
+            cTitulo.Width = 134; //Ancho de la celda para el cuerpo.
 
         }
 

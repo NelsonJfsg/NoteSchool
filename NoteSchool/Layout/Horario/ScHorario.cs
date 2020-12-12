@@ -40,47 +40,68 @@ namespace NoteSchool.Layout.Horario {
 
         //Abre el horario del lunes de forma predeterminada.
         private void ScHorario_Load(object sender, EventArgs e) {
+
+            //Cargamos el horario al iniciar el Form.
             hr.cargarHorario(dataGVHorario, "horario_lunes");
+            
+            DataGridViewColumn cTitulo = dataGVHorario.Columns[1];
+            cTitulo.Width = 141; //Ancho de la celda para el cuerpo.
         }
 
         //Evento doble click para ir a el aula.
         private void dataGVHorario_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+
             hr.abrirAula(dataGVHorario);
+
         }
 
         //Evento click para el toolStrip del lunes.
         private void lunesToolStripMenuItem_Click(object sender, EventArgs e) {
+
             cambiarHorario("lunes", dataGVHorario);
+
         }
 
         //Evento click para el toolStrip del martes.
         private void martesToolStripMenuItem_Click(object sender, EventArgs e) {
+
             cambiarHorario("martes", dataGVHorario);
+
         }
 
         //Evento click para el toolStrip del miercoles.
         private void miercolesToolStripMenuItem_Click(object sender, EventArgs e) {
+
             cambiarHorario("miercoles", dataGVHorario);
+
         }
         
         //Evento click para el toolStrip del jueves.
         private void sabadoToolStripMenuItem_Click(object sender, EventArgs e) {
+
             cambiarHorario("jueves", dataGVHorario);
+
         }
         
         //Evento click para el toolStrip del viernes.
         private void viernesToolStripMenuItem_Click(object sender, EventArgs e) {
+
             cambiarHorario("viernes", dataGVHorario);
+
         }
         
         //Evento click para el toolStrip del sabado.
         private void sabadoToolStripMenuItem1_Click(object sender, EventArgs e) {
+
             cambiarHorario("sabado", dataGVHorario);
+
         }
         
         //Evento click para el toolStrip del domingo.
         private void domingoToolStripMenuItem_Click(object sender, EventArgs e) {
+
             cambiarHorario("domingo", dataGVHorario);
+
         }
 
         //Metodo general para cambiar el horario en el DGV.
@@ -134,7 +155,9 @@ namespace NoteSchool.Layout.Horario {
 
         //Evento click para actualizar la base de datos.
         private void butActualizar_Click(object sender, EventArgs e) {
+
             hr.cargarHorario(dataGVHorario, "horario_" + lDia.Text);
+
         }
 
     }

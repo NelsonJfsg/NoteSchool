@@ -49,10 +49,14 @@
             // 
             // dataGVNotas
             // 
+            this.dataGVNotas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGVNotas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.dataGVNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVNotas.Location = new System.Drawing.Point(18, 53);
             this.dataGVNotas.Name = "dataGVNotas";
+            this.dataGVNotas.RowHeadersVisible = false;
             this.dataGVNotas.Size = new System.Drawing.Size(632, 227);
             this.dataGVNotas.TabIndex = 8;
             this.dataGVNotas.VirtualMode = true;

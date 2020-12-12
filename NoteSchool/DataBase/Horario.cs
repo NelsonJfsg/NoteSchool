@@ -11,9 +11,17 @@ using System.Windows.Forms;
 namespace NoteSchool.DataBase {
     class Horario {
 
+        //Estilo de color.
+        public void colorStyle(DataGridView dataGridView) {
+
+            dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31,31,31);
+            dataGridView.GridColor = Color.FromArgb(41, 41, 41);
+        }
+
         //Metodo para cargar el horario en el DGV.
         public void cargarHorario(DataGridView dataGridView, String tabla) {
             
+            colorStyle(dataGridView); //Estilo para el DGV.
             dataGridView.AllowUserToAddRows = false; //Desactva añadir una fila.
             
             //Estilo de texto para la tabla.
@@ -38,8 +46,8 @@ namespace NoteSchool.DataBase {
             DataGridViewColumn Column = dataGridView.Columns[0]; //guarda la primer columna.  
             Column.Visible = false; //Evita que se muestre la primer columna.
 
-            DataGridViewColumn cLink = dataGridView.Columns[3];
-            cLink.Width = 395;
+            DataGridViewColumn cLink = dataGridView.Columns[3]; //Guardamos la tercer columna.
+            cLink.Width = 395; //Tamaño del link.
 
         }
         

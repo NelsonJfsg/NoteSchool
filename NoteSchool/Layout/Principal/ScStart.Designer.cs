@@ -23,110 +23,115 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lNota = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGVHorario = new System.Windows.Forms.DataGridView();
             this.lHorario = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.lTareas = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGVTareas = new System.Windows.Forms.DataGridView();
+            this.cbDia = new System.Windows.Forms.ComboBox();
+            this.pbActualizar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVHorario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVTareas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGVHorario
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGVHorario.AllowUserToOrderColumns = true;
+            this.dataGVHorario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 21;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.dataGridView1.Location = new System.Drawing.Point(17, 175);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(370, 271);
-            this.dataGridView1.TabIndex = 31;
-            // 
-            // lNota
-            // 
-            this.lNota.AutoSize = true;
-            this.lNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lNota.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNota.ForeColor = System.Drawing.Color.White;
-            this.lNota.Location = new System.Drawing.Point(393, 13);
-            this.lNota.Name = "lNota";
-            this.lNota.Size = new System.Drawing.Size(95, 20);
-            this.lNota.TabIndex = 30;
-            this.lNota.Text = "Nota rapida.";
+            this.dataGVHorario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGVHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGVHorario.ColumnHeadersHeight = 21;
+            this.dataGVHorario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.dataGVHorario.Location = new System.Drawing.Point(17, 235);
+            this.dataGVHorario.Name = "dataGVHorario";
+            this.dataGVHorario.ReadOnly = true;
+            this.dataGVHorario.RowHeadersVisible = false;
+            this.dataGVHorario.RowTemplate.Height = 21;
+            this.dataGVHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGVHorario.Size = new System.Drawing.Size(516, 201);
+            this.dataGVHorario.TabIndex = 31;
+            this.dataGVHorario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVHorario_CellDoubleClick);
             // 
             // lHorario
             // 
             this.lHorario.AutoSize = true;
             this.lHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lHorario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lHorario.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lHorario.ForeColor = System.Drawing.Color.White;
-            this.lHorario.Location = new System.Drawing.Point(13, 151);
+            this.lHorario.Location = new System.Drawing.Point(14, 209);
             this.lHorario.Name = "lHorario";
-            this.lHorario.Size = new System.Drawing.Size(66, 20);
+            this.lHorario.Size = new System.Drawing.Size(72, 20);
             this.lHorario.TabIndex = 29;
             this.lHorario.Text = "Horario ";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Items.AddRange(new object[] {
-            "Calculo vectorial - Nombre de la tarea 1",
-            "Tarea 2",
-            "Tarea 3",
-            "Tarea 4",
-            "Tarea 5",
-            "Tarea 6 ",
-            "Tarea 7",
-            "Tarea 8",
-            "Tarea 9",
-            "Tarea 10"});
-            this.listBox1.Location = new System.Drawing.Point(17, 41);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(332, 89);
-            this.listBox1.TabIndex = 28;
             // 
             // lTareas
             // 
             this.lTareas.AutoSize = true;
             this.lTareas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lTareas.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTareas.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTareas.ForeColor = System.Drawing.Color.White;
             this.lTareas.Location = new System.Drawing.Point(13, 17);
             this.lTareas.Name = "lTareas";
-            this.lTareas.Size = new System.Drawing.Size(131, 20);
+            this.lTareas.Size = new System.Drawing.Size(141, 20);
             this.lTareas.TabIndex = 27;
             this.lTareas.Text = "Tareas pendientes";
             // 
-            // richTextBox1
+            // dataGVTareas
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(397, 41);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(262, 405);
-            this.richTextBox1.TabIndex = 26;
-            this.richTextBox1.Text = "";
+            this.dataGVTareas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGVTareas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.dataGVTareas.Location = new System.Drawing.Point(17, 41);
+            this.dataGVTareas.Name = "dataGVTareas";
+            this.dataGVTareas.ReadOnly = true;
+            this.dataGVTareas.RowHeadersVisible = false;
+            this.dataGVTareas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGVTareas.Size = new System.Drawing.Size(643, 157);
+            this.dataGVTareas.TabIndex = 32;
+            // 
+            // cbDia
+            // 
+            this.cbDia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.cbDia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDia.ForeColor = System.Drawing.Color.White;
+            this.cbDia.FormattingEnabled = true;
+            this.cbDia.Items.AddRange(new object[] {
+            "lunes",
+            "martes",
+            "miercoles",
+            "jueves",
+            "viernes",
+            "sabado",
+            "domingo"});
+            this.cbDia.Location = new System.Drawing.Point(539, 235);
+            this.cbDia.Name = "cbDia";
+            this.cbDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbDia.Size = new System.Drawing.Size(121, 25);
+            this.cbDia.TabIndex = 34;
+            this.cbDia.Text = "Dia";
+            this.cbDia.SelectedIndexChanged += new System.EventHandler(this.cbDia_SelectedIndexChanged);
+            // 
+            // pbActualizar
+            // 
+            this.pbActualizar.Image = global::NoteSchool.Properties.Resources.actualizar;
+            this.pbActualizar.Location = new System.Drawing.Point(634, 11);
+            this.pbActualizar.Name = "pbActualizar";
+            this.pbActualizar.Size = new System.Drawing.Size(26, 24);
+            this.pbActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbActualizar.TabIndex = 35;
+            this.pbActualizar.TabStop = false;
+            this.pbActualizar.Click += new System.EventHandler(this.pbActualizar_Click);
             // 
             // ScStart
             // 
@@ -134,16 +139,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(672, 458);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lNota);
+            this.Controls.Add(this.pbActualizar);
+            this.Controls.Add(this.cbDia);
+            this.Controls.Add(this.dataGVTareas);
+            this.Controls.Add(this.dataGVHorario);
             this.Controls.Add(this.lHorario);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lTareas);
-            this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ScStart";
             this.Text = "ScStart";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ScStart_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVHorario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVTareas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,11 +159,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lNota;
+        private System.Windows.Forms.DataGridView dataGVHorario;
         private System.Windows.Forms.Label lHorario;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label lTareas;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DataGridView dataGVTareas;
+        private System.Windows.Forms.ComboBox cbDia;
+        private System.Windows.Forms.PictureBox pbActualizar;
     }
 }

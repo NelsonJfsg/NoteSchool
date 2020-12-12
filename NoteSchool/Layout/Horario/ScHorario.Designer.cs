@@ -74,12 +74,16 @@ namespace NoteSchool.Layout.Horario {
             // 
             this.dataGVHorario.AllowUserToResizeColumns = false;
             this.dataGVHorario.AllowUserToResizeRows = false;
+            this.dataGVHorario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGVHorario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.dataGVHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGVHorario.GridColor = System.Drawing.Color.White;
             this.dataGVHorario.Location = new System.Drawing.Point(12, 94);
             this.dataGVHorario.Name = "dataGVHorario";
             this.dataGVHorario.ReadOnly = true;
+            this.dataGVHorario.RowHeadersVisible = false;
             this.dataGVHorario.Size = new System.Drawing.Size(637, 298);
             this.dataGVHorario.TabIndex = 7;
             this.dataGVHorario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGVHorario_CellDoubleClick);

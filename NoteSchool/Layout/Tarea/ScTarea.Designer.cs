@@ -55,6 +55,7 @@ namespace NoteSchool.Layout.Tarea {
             this.dataGVTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGVTarea.Location = new System.Drawing.Point(17, 53);
             this.dataGVTarea.Name = "dataGVTarea";
+            this.dataGVTarea.RowHeadersVisible = false;
             this.dataGVTarea.Size = new System.Drawing.Size(632, 227);
             this.dataGVTarea.TabIndex = 14;
             this.dataGVTarea.VirtualMode = true;

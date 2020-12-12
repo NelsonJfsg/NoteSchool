@@ -87,7 +87,11 @@ namespace NoteSchool.Layout.Notas {
             // 
             // rtCuerpo
             // 
+            this.rtCuerpo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtCuerpo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.rtCuerpo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtCuerpo.ForeColor = System.Drawing.Color.White;
             this.rtCuerpo.Location = new System.Drawing.Point(16, 88);
             this.rtCuerpo.Name = "rtCuerpo";

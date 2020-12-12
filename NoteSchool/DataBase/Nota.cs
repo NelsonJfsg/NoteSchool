@@ -13,6 +13,14 @@ namespace NoteSchool.DataBase {
 
     class Nota {
 
+        //Estilo de color.
+        public void colorStyle(DataGridView dataGridView) {
+
+            dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(31,31,31);
+            dataGridView.GridColor = Color.FromArgb(41, 41, 41);
+
+        }
+
         //Variables
         public String id;
 
@@ -25,7 +33,7 @@ namespace NoteSchool.DataBase {
             String cuerpo = rtCuerpo.Text;
 
             //Comando de en que tabla insertar que datos.
-            String sql = "INSERT INTO notas (titulo, fecha, cuerpo) VALUES ('"+ titulo + "', '" + fecha + "', '"+ cuerpo + "')";
+            String sql = "INSERT INTO notas (Titulo, Fecha, Cuerpo) VALUES ('"+ titulo + "', '" + fecha + "', '"+ cuerpo + "')";
 
             MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
             conexionBd.Open(); //Abrir conexion con la base de datos.
@@ -58,6 +66,8 @@ namespace NoteSchool.DataBase {
 
         //Muestra las notas en un DataGridView.
         public void cargarNotas(DataGridView dataGridView) {
+
+            colorStyle(dataGridView); //Estilo para el DGV.
             
             dataGridView.AllowUserToAddRows = false; //Desactva añadir una fila.
             
@@ -104,9 +114,9 @@ namespace NoteSchool.DataBase {
             //Condicion para ver si hay algun dato leido.
             if (lec.Read() == true) {
 
-                tbTitulo.Text = lec["titulo"].ToString();
-                tbFecha.Text = lec["fecha"].ToString();
-                rtCuerpo.Text = lec["cuerpo"].ToString();
+                tbTitulo.Text = lec["Titulo"].ToString();
+                tbFecha.Text = lec["Fecha"].ToString();
+                rtCuerpo.Text = lec["Cuerpo"].ToString();
             
             } else {
 
@@ -156,7 +166,7 @@ namespace NoteSchool.DataBase {
             String cuerpo = rtCuerpo.Text;
 
             //Comando de en que tabla insertar que datos.
-            String sql = "UPDATE notas SET titulo= '"+ titulo + "', fecha='"+ fecha + "', cuerpo='"+ cuerpo + "' WHERE idnotas='"+ tId + "'";
+            String sql = "UPDATE notas SET Titulo= '"+ titulo + "', Fecha='"+ fecha + "', Cuerpo='"+ cuerpo + "' WHERE idnotas='"+ tId + "'";
 
             MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
             conexionBd.Open(); //Abrir conexion con la base de datos.

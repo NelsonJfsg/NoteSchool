@@ -43,6 +43,9 @@ namespace NoteSchool.Layout.Tarea {
             
             tarea.cargarTarea(dataGVTarea);
             
+            DataGridViewColumn cTitulo = dataGVTarea.Columns[1];
+            cTitulo.Width = 118; //Ancho de la celda para el titulo.
+
         }
 
         //Evento click para actualizar el DGV.
