@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using NoteSchool.DataBase;
+using NoteSchool.Layout.Inicio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,35 +41,24 @@ namespace NoteSchool.Layout {
 
         //Limpiar textBox usuario
         private void tbUserName_Click(object sender, EventArgs e) {
-            if (tbUserName.Text == userText) {
-                tbUserName.Text = ("");
-                tbUserName.ForeColor = Color.White;
-            }
+            cambiarColorTexto(tbUserName, userText);
         }
 
         //Reiniciar el tbUserName.
         private void tbUserName_Leave(object sender, EventArgs e) {
 
-            if(tbUserName.Text == ""){
-                tbUserName.ForeColor = (Color.Gray);
-                tbUserName.Text = (userText);
-            }
+            reinicarTexto(tbUserName, userText);
+
         }
         
         //Limpiar textBox password.
         private void tbPassword_Click(object sender, EventArgs e) {
-            if (tbPassword.Text == passwordText) {
-                tbPassword.Text = ("");
-                tbPassword.ForeColor = Color.White;
-            }
+            cambiarColorTexto(tbPassword, passwordText);
         }
 
         //Reiniciar el tbPassword.
         private void tbPassword_Leave(object sender, EventArgs e) {
-            if(tbPassword.Text == ""){
-                tbPassword.ForeColor = (Color.Gray);
-                tbPassword.Text = (passwordText);
-            }
+            reinicarTexto(tbPassword, passwordText);
         }
 
         //Verificar usuario y contraseña.
@@ -85,15 +75,77 @@ namespace NoteSchool.Layout {
 
         //Abrir menu para registrarse.
         private void pbSingIn_Click(object sender, EventArgs e) {
+
             ScSignIn scSignIn = new ScSignIn();
             scSignIn.Show();
             this.Visible = false;
+        
         }
 
         //Cambiar el control a resaltar.
         private void ScLogin_Load(object sender, EventArgs e) {
             this.ActiveControl = lTittle;
         }
-    
-    }
+
+        //Verificamos que la tecla TAB sea presionada.
+        private void tbUserName_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+            
+            //Verificamos si se preciono la tecla TAB.
+            if (e.KeyData == Keys.Tab) {
+                cambiarColorTexto(tbPassword, passwordText); 
+            }
+
+        }
+        
+        //Verificamos que la tecla TAB sea presionada.
+        private void lTittle_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+
+            //Verificamos si se preciono la tecla TAB.
+            if (e.KeyData == Keys.Tab) {
+                cambiarColorTexto(tbUserName, userText);
+            }
+
+        }
+
+        //Metodo para reinicar los textos por defecto.
+        public void reinicarTexto(TextBox tb, String text) {
+
+            //Verificamos que el TB esté vacio.
+            if(tb.Text == ""){
+                
+                tb.ForeColor = (Color.DarkGray); //Cambiamos el color del TB
+                tb.Text = (text); //Reiniciamos el texto por defecto.
+            
+            }
+
+        }
+
+        //Metodo para cambiar el color y limpiar el TB.
+        public void cambiarColorTexto(TextBox tb, String text) {
+
+            //Verificamos que los textos sean iguales.
+            if (tb.Text == text) {
+
+                tb.Text = (""); //Limpiamos el TB.
+                tb.ForeColor = Color.White; //Cambiamos el color de la leta.
+            
+            }
+
+        }
+
+        //Verificamos que la tecla TAB sea presionada.
+        private void butLogin_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+            if (e.KeyData == Keys.Tab) {
+                cambiarColorTexto(tbUserName, userText);
+            }
+        }
+
+        //Evento click para reiniciar la contraseña.
+        private void lReinicarContraseña_Click(object sender, EventArgs e) {
+            
+            ScResetPassword scResetPassword = new ScResetPassword();
+            scResetPassword.Show();
+            this.Visible = false;
+        }
+    } 
 }

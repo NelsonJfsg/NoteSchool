@@ -61,16 +61,25 @@ namespace NoteSchool.Layout.Tarea {
             //Validamos que el DGV no esté vacío.
             if (dataGVTarea.CurrentRow != null) {
 
-                //Guardamos el id.
-                String id = dataGVTarea.CurrentRow.Cells["idtareas"].Value.ToString();
+                //Variables
+                DialogResult result = MessageBox.Show("¿Desea eliminar la tarea?", "Eliminar tarea.", MessageBoxButtons.YesNo);
 
-                tarea.eliminarTarea(id); //Eliminamos la nota.
+                //Confirmar la eliminacion de la nota.
+                if (result == DialogResult.Yes) {
+                    
+                    //Guardamos el id.
+                    String id = dataGVTarea.CurrentRow.Cells["idtareas"].Value.ToString();
+
+                    tarea.eliminarTarea(id); //Eliminamos la nota.
+
+                }
 
             } else {
 
                 MessageBox.Show("Selecciona una tarea");
 
             }
+
         }
 
         //Evento click para editar la tarea.

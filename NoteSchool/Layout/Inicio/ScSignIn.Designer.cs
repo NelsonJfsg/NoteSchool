@@ -72,6 +72,7 @@
             this.tbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbUserName.Click += new System.EventHandler(this.tbUserName_Click);
             this.tbUserName.Leave += new System.EventHandler(this.tbUserName_Leave);
+            this.tbUserName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbUserName_PreviewKeyDown);
             // 
             // tbPassword
             // 
@@ -105,6 +106,7 @@
             this.butSignIn.Text = "Registrar";
             this.butSignIn.UseVisualStyleBackColor = false;
             this.butSignIn.Click += new System.EventHandler(this.butSignIn_Click);
+            this.butSignIn.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.butSignIn_PreviewKeyDown);
             // 
             // lTittle
             // 
@@ -116,6 +118,7 @@
             this.lTittle.Size = new System.Drawing.Size(277, 25);
             this.lTittle.TabIndex = 15;
             this.lTittle.Text = "Crea tu cuenta de NoteSchool";
+            this.lTittle.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.lTittle_PreviewKeyDown);
             // 
             // pbUserIcon
             // 

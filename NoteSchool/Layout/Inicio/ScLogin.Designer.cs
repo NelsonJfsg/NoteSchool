@@ -32,6 +32,7 @@
             this.pbUserIcon = new System.Windows.Forms.PictureBox();
             this.pbTittle = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.lReinicarContraseña = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbSignIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTittle)).BeginInit();
@@ -48,6 +49,7 @@
             this.lTittle.Size = new System.Drawing.Size(248, 25);
             this.lTittle.TabIndex = 1;
             this.lTittle.Text = "¡Bienvendio a NoteSchool!";
+            this.lTittle.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.lTittle_PreviewKeyDown);
             // 
             // tbUserName
             // 
@@ -64,6 +66,7 @@
             this.tbUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbUserName.Click += new System.EventHandler(this.tbUserName_Click);
             this.tbUserName.Leave += new System.EventHandler(this.tbUserName_Leave);
+            this.tbUserName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbUserName_PreviewKeyDown);
             // 
             // tbPassword
             // 
@@ -97,6 +100,7 @@
             this.butLogin.Text = "Entrar";
             this.butLogin.UseVisualStyleBackColor = false;
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
+            this.butLogin.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.butLogin_PreviewKeyDown);
             // 
             // pbSignIn
             // 
@@ -142,12 +146,26 @@
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
+            // lReinicarContraseña
+            // 
+            this.lReinicarContraseña.AutoSize = true;
+            this.lReinicarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lReinicarContraseña.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lReinicarContraseña.ForeColor = System.Drawing.Color.DarkGray;
+            this.lReinicarContraseña.Location = new System.Drawing.Point(118, 427);
+            this.lReinicarContraseña.Name = "lReinicarContraseña";
+            this.lReinicarContraseña.Size = new System.Drawing.Size(157, 17);
+            this.lReinicarContraseña.TabIndex = 11;
+            this.lReinicarContraseña.Text = "¿Olvidaste tu contraseña?";
+            this.lReinicarContraseña.Click += new System.EventHandler(this.lReinicarContraseña_Click);
+            // 
             // ScLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.lReinicarContraseña);
             this.Controls.Add(this.pbSignIn);
             this.Controls.Add(this.pbUserIcon);
             this.Controls.Add(this.pbTittle);
@@ -180,5 +198,6 @@
         private System.Windows.Forms.PictureBox pbTittle;
         private System.Windows.Forms.PictureBox pbUserIcon;
         private System.Windows.Forms.PictureBox pbSignIn;
+        private System.Windows.Forms.Label lReinicarContraseña;
     }
 }

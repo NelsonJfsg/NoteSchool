@@ -80,18 +80,26 @@ namespace NoteSchool.Layout {
             //Validamos que el DGV no esté vacío.
             if (dataGVNotas.CurrentRow != null) {
 
-                //Guardamos el id.
-                String id = dataGVNotas.CurrentRow.Cells["idnotas"].Value.ToString();
+                //Variables
+                DialogResult result = MessageBox.Show("¿Desea eliminar la nota?", "Eliminar nota.", MessageBoxButtons.YesNo);
 
-                nota.eliminarNota(id); //Eliminamos la nota.
+                //Confirmar la eliminacion de la nota.
+                if (result == DialogResult.Yes) {
 
+                    //Guardamos el id.
+                    String id = dataGVNotas.CurrentRow.Cells["idnotas"].Value.ToString();
+
+                    nota.eliminarNota(id); //Eliminamos la nota.
+
+                }
+
+                
             } else {
 
                 MessageBox.Show("Selecciona una nota");
 
             }
             
-
         }
 
         //Evento click para actualizar las notas mostradas en el DGV.

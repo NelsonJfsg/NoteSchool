@@ -53,18 +53,12 @@ namespace NoteSchool.Layout {
 
         //Reiniciar el tbUserName.
         private void tbUserName_Leave(object sender, EventArgs e) {
-            if(tbUserName.Text == ""){
-                tbUserName.ForeColor = (Color.Gray);
-                tbUserName.Text = (userText);
-            }
+            reinicarTexto(tbUserName, userText);
         }
         
         //Reiniciar el tbPassword.
         private void tbPassword_Leave(object sender, EventArgs e) {
-            if(tbPassword.Text == ""){
-                tbPassword.ForeColor = (Color.Gray);
-                tbPassword.Text = (passwordText);
-            }
+            reinicarTexto(tbPassword, passwordText);
         }
 
         //Cambiar el control a resaltar.
@@ -74,19 +68,66 @@ namespace NoteSchool.Layout {
 
         //Limpiar textBox user.
         private void tbUserName_Click(object sender, EventArgs e) {
-            if (tbUserName.Text == userText) {
-                tbUserName.Text = ("");
-                tbUserName.ForeColor = Color.White;
-            }
+            cambiarColorTexto(tbUserName, userText);
         }
 
         //Reiniciar tbPassword.
         private void tbPassword_Click(object sender, EventArgs e) {
-            if (tbPassword.Text == passwordText) {
-                tbPassword.Text = ("");
-                tbPassword.ForeColor = Color.White;
-            }
+            cambiarColorTexto(tbPassword, passwordText);
         }
     
+        //Metodo para reinicar los textos por defecto.
+        public void reinicarTexto(TextBox tb, String text) {
+
+            //Verificamos que el TB esté vacio.
+            if(tb.Text == ""){
+                
+                tb.ForeColor = (Color.Gray); //Cambiamos el color del TB
+                tb.Text = (text); //Reiniciamos el texto por defecto.
+            
+            }
+
+        }
+
+        //Metodo para cambiar el color y limpiar el TB.
+        public void cambiarColorTexto(TextBox tb, String text) {
+
+            //Verificamos que los textos sean iguales.
+            if (tb.Text == text) {
+
+                tb.Text = (""); //Limpiamos el TB.
+                tb.ForeColor = Color.White; //Cambiamos el color de la leta.
+            
+            }
+
+        }
+
+        //Evento para conocer la tecla presionada.
+        private void tbUserName_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+
+            if (e.KeyData == Keys.Tab) {
+                cambiarColorTexto(tbPassword, passwordText);
+            }
+
+        }
+
+        //Evento para conocer la tecla presionada.
+        private void lTittle_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+
+            if (e.KeyData == Keys.Tab) {
+                cambiarColorTexto(tbUserName, userText);
+            }
+
+        }
+
+        //Evento para conocer la tecla presionada.
+        private void butSignIn_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+
+            if (e.KeyData == Keys.Tab) {
+                cambiarColorTexto(tbUserName, userText);
+            }
+
+        }
+
     }
 }

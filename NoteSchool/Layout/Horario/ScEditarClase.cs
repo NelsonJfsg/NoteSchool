@@ -57,6 +57,10 @@ namespace NoteSchool.Layout.Horario {
         //Metodo para cargar los datos en los TextBox.
         private void ScEditarClase_Load(object sender, EventArgs e) {
             lDia.Text = dia;
+
+            DataBase.Horario horario = new DataBase.Horario();
+            horario.abrirHorario(id, dia, tbMateria, tbHora, tbLink);
+
         }
     
     }

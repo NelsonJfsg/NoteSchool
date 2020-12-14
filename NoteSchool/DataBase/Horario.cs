@@ -54,9 +54,16 @@ namespace NoteSchool.DataBase {
         //Metodo para ejecutar el link del aula.
         public void abrirAula(DataGridView dataGridView) {
 
-            String link = dataGridView.CurrentRow.Cells["Aula"].Value.ToString();
-            System.Diagnostics.Process.Start(link);
+            try {
+                
+                String link = dataGridView.CurrentRow.Cells["Aula"].Value.ToString();
+                System.Diagnostics.Process.Start(link);
 
+            } catch (Exception err) {
+
+                MessageBox.Show("Ingrese un link valido.");
+
+            }
         }
 
         //Metodo para crear una clase y guardarla en la base de datos.
@@ -158,6 +165,35 @@ namespace NoteSchool.DataBase {
                 conexionBd.Close(); //Cerrar conexion con la base de datos.
 
             }
+        }
+
+        //Abrimos el dia en la ventana del editor de horario.
+        public void abrirHorario(String id, String dia, TextBox tbMateria, TextBox tbHora, TextBox tbLink) {
+
+            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
+            conexionBd.Open(); //Abrir conexion con la base de datos.
+
+            //Comando.
+            MySqlCommand com = new MySqlCommand();
+            com.Connection = conexionBd;
+            //("SELECT * FROM notas WHERE idnotas= '" + id + "'");
+            com.CommandText = ("SELECT * FROM horario_" + dia + " WHERE idhorario_" + dia + "= '" + id + "'");
+            
+            MySqlDataReader lec = com.ExecuteReader(); //Reader de la base de datos.
+
+            //Condicion para ver si hay algun dato leido.
+            if (lec.Read() == true) {
+
+                tbMateria.Text = lec["Materia"].ToString();
+                tbHora.Text = lec["Hora"].ToString();
+                tbLink.Text = lec["Aula"].ToString();
+
+            } else {
+
+                MessageBox.Show("No existe la nota");
+            
+            }
+
         }
 
     }

@@ -64,7 +64,6 @@ namespace NoteSchool.DataBase {
             
             MySqlDataReader lec = com.ExecuteReader(); //Reader de la base de datos.
 
-            
             //Condicion para ver si hay algun dato leido.
             if (lec.Read() == true) {
 
@@ -119,6 +118,69 @@ namespace NoteSchool.DataBase {
             
             }
 
+        }
+
+        //Metodo para validar si existe el usuario y editar la contraseña.
+        public void validarUsuarioExistenteContraseña(Form sc, Form scL, TextBox tbUserName, TextBox tbPassword) {
+
+            //Variables
+            String userName = tbUserName.Text;
+
+            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
+            conexionBd.Open(); //Abrir conexion con la base de datos.
+
+            //Comando.
+            MySqlCommand com = new MySqlCommand();
+            com.Connection = conexionBd;
+            com.CommandText = ("SELECT userName FROM users WHERE userName= '" + userName + "'");
+            
+            MySqlDataReader lec = com.ExecuteReader(); //Reader de la base de datos.
+
+            //Condicion para ver si hay algun dato leido.
+            if (lec.Read() == true) {
+
+                cambiarContraseña(sc, scL, tbUserName, tbPassword); //Metodo para registrar al usuario en la base de datos.
+    
+            } else {
+                
+                MessageBox.Show("Usuario no existente.");
+            
+            }
+
+        }
+
+        //Metodo para modificar la contraseña.
+        public void cambiarContraseña(Form scL, Form scH, TextBox tbUserName, TextBox tbPassword) {
+            
+
+            //Variables
+            String user = tbUserName.Text;
+            String password = tbPassword.Text;
+
+            //Comando de en que tabla insertar que datos.
+            String sql = "UPDATE users SET userName= '"+ user + "', userPassword='"+ password + "' WHERE userName='"+ user + "'";
+
+            MySqlConnection conexionBd = Conexion.conexion(); //Objeto para llamar la conexion.
+            conexionBd.Open(); //Abrir conexion con la base de datos.
+
+
+            try {
+
+                //Aplicar comando para subir los datos.
+                MySqlCommand comando = new MySqlCommand(sql,conexionBd);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Usuario editado con exito.");
+
+            } catch (MySqlException er) {
+
+                MessageBox.Show(er.Message); //Mensaje de error.
+
+            } finally {
+
+                conexionBd.Close(); //Cerrar conexion con la base de datos.
+                scL.Dispose();
+                scH.Show();
+            }
         }
 
     }
