@@ -30,6 +30,7 @@ namespace NoteSchool.Layout.Horario {
 
         //Variables
         String dia;
+        DataGridView tDGV;
 
         //Objetos.
         DataBase.Horario hr = new DataBase.Horario();
@@ -41,11 +42,17 @@ namespace NoteSchool.Layout.Horario {
             return dia;
         }
 
+        //setDGV
+        public DataGridView setDGV(DataGridView dGV) {
+            tDGV = dGV;
+            return dGV;
+        }
+
         //Boton para registrar la clase.
         private void butRegistrarClase_Click(object sender, EventArgs e) {
 
             hr.crearClase(this, lDia.Text, tbMateria, tbHora, tbLink);
-            
+            hr.cargarHorario(tDGV, "horario_" + dia);
         }
 
         //Darle al lDia el valor del dia especifiacdo.

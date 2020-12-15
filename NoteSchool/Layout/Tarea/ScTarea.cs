@@ -34,6 +34,7 @@ namespace NoteSchool.Layout.Tarea {
         private void pbCrearTarea_Click(object sender, EventArgs e) {
 
             ScVerTarea scVerTarea = new ScVerTarea();
+            scVerTarea.setDGV(dataGVTarea);
             scVerTarea.Show();
 
         }
@@ -71,6 +72,7 @@ namespace NoteSchool.Layout.Tarea {
                     String id = dataGVTarea.CurrentRow.Cells["idtareas"].Value.ToString();
 
                     tarea.eliminarTarea(id); //Eliminamos la nota.
+                    tarea.cargarTarea(dataGVTarea);
 
                 }
 
@@ -97,6 +99,7 @@ namespace NoteSchool.Layout.Tarea {
                 //Guardamos el id y el estado.
                 scVerTarea.setId(id);
                 scVerTarea.setEstado(true);
+                scVerTarea.setDGV(dataGVTarea);
                 scVerTarea.Show(); //Mostramos la ventana del editor de texto.
 
             } else {

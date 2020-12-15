@@ -30,6 +30,13 @@ namespace NoteSchool.Layout.Horario {
         //Variables
         String dia;
         String id;
+        DataGridView tDGV;
+
+        //setDGV
+        public DataGridView setDGV(DataGridView dGV) {
+            tDGV = dGV;
+            return dGV;
+        }
 
         //setDia
         public String setDia(String text) {
@@ -51,7 +58,7 @@ namespace NoteSchool.Layout.Horario {
 
             //Metodo para actualizar los valores en la base de datos.
             hr.editarClase(id, this, dia, tbMateria, tbHora, tbLink);
-
+            hr.cargarHorario(tDGV, "horario_" + dia);
         }
 
         //Metodo para cargar los datos en los TextBox.

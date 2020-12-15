@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using NoteSchool.DataBase;
 
 namespace NoteSchool.Layout.Notas {
+
     public partial class ScNotas : Form {
 
         //Codigo para activar el doble buffer
@@ -29,10 +30,18 @@ namespace NoteSchool.Layout.Notas {
 
         //Variables.
         String id;
+        
         bool tEstado; //Define si es una nota nueva o ya creada.
+        DataGridView tDGV;
 
         //Objetos.
         Nota nota = new Nota();
+
+        //setDGV
+        public DataGridView setDGV(DataGridView dGV) {
+            tDGV = dGV;
+            return dGV;
+        }
 
         //setId.
         public String setId(String text) {
@@ -50,10 +59,9 @@ namespace NoteSchool.Layout.Notas {
         private void ScNotas_Load(object sender, EventArgs e) {
 
             if (tEstado == true) {
-       
                 Nota nota = new Nota();
                 nota.abrirNota(id, tbTitulo, tbFecha, rtCuerpo);
-
+                
             }
 
         }
@@ -73,6 +81,8 @@ namespace NoteSchool.Layout.Notas {
                 
                 //Crea la nota.
                 nota.crearNota(tbTitulo, tbFecha, rtCuerpo);
+                nota.cargarNotas(tDGV);
+
                 tEstado = true;
 
             } else {
@@ -81,11 +91,13 @@ namespace NoteSchool.Layout.Notas {
 
                     //Editamos con el id de la nota antes creada.
                     nota.editarNota(id, tbTitulo, tbFecha, rtCuerpo);
+                    nota.cargarNotas(tDGV);
 
                 } else {
-
+                    
                     //Editamos con el id de la nota nueva.
                     nota.editarNota(nota.id, tbTitulo, tbFecha, rtCuerpo);
+                    nota.cargarNotas(tDGV);
 
                 }
             }

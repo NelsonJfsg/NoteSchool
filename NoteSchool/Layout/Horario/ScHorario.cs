@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using NoteSchool.DataBase;
 
 namespace NoteSchool.Layout.Horario {
+
     public partial class ScHorario : Form {
 
         //Codigo para activar el doble buffer
@@ -29,20 +30,22 @@ namespace NoteSchool.Layout.Horario {
 
         //Objetos
         DataBase.Horario hr = new DataBase.Horario();
-        
+
         //Abrir ventana para registrar una nueva clase.
         private void butRegistrarClase_Click(object sender, EventArgs e) {
+
             ScRegistrarClase scRegistrarClase = new ScRegistrarClase();
-            
+            scRegistrarClase.setDGV(dataGVHorario); //Enviamos el DGV al registro.
             scRegistrarClase.setDia(lDia.Text);
             scRegistrarClase.Show();
+
         }
 
         //Abre el horario del lunes de forma predeterminada.
         private void ScHorario_Load(object sender, EventArgs e) {
 
             //Cargamos el horario al iniciar el Form.
-            hr.cargarHorario(dataGVHorario, "horario_lunes");
+            hr.cargarHorario(dataGVHorario, "horario_" + lDia.Text);
             
             DataGridViewColumn cTitulo = dataGVHorario.Columns[1];
             cTitulo.Width = 141; //Ancho de la celda para el cuerpo.
@@ -123,9 +126,10 @@ namespace NoteSchool.Layout.Horario {
 
                String id = dataGVHorario.CurrentRow.Cells["idhorario_" + lDia.Text].Value.ToString();
                 
-               //Metodo para settear el parametro dia y el id.
+               //Metodo para settear el parametro dia, id y el DGV.
                scEditarClase.setDia(lDia.Text);
                scEditarClase.setId(id);
+               scEditarClase.setDGV(dataGVHorario);
 
                scEditarClase.Show(); //Mostrar el form para editar.
 
@@ -140,15 +144,28 @@ namespace NoteSchool.Layout.Horario {
         //Evento click para eliminar la clase.
         private void butEliminarClase_Click(object sender, EventArgs e) {
 
+
+            //Validamos que el DGV no esté vacío.
             if (dataGVHorario.CurrentRow != null) {
 
-               String id = dataGVHorario.CurrentRow.Cells["idhorario_" + lDia.Text].Value.ToString();
-               hr.eliminarClase(id, lDia.Text);
+                //Variables
+                DialogResult result = MessageBox.Show("¿Desea eliminar la clase?", "Eliminar clase.", MessageBoxButtons.YesNo);
 
+                //Confirmar la eliminacion de la nota.
+                if (result == DialogResult.Yes) {
+
+                    //Guardamos el id.
+                    String id = dataGVHorario.CurrentRow.Cells["idhorario_" + lDia.Text].Value.ToString();
+                    hr.eliminarClase(id, lDia.Text);
+                    hr.cargarHorario(dataGVHorario, "horario_" + lDia.Text);
+
+                }
+
+                
             } else {
 
                 MessageBox.Show("Selecciona una clase.");
-            
+
             }
 
         }

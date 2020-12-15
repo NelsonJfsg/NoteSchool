@@ -42,8 +42,9 @@ namespace NoteSchool.Layout {
 
         //Evento click para abrir la ventana del editor de texto.
         private void pbCrearNota_Click(object sender, EventArgs e) {
-
+            
             ScNotas scNotas = new ScNotas();
+            scNotas.setDGV(dataGVNotas);
             scNotas.Show();
 
         }
@@ -63,6 +64,7 @@ namespace NoteSchool.Layout {
                 //Guardamos el id y el estado.
                 scNotas.setId(id);
                 scNotas.setEstado(true);
+                scNotas.setDGV(dataGVNotas);
 
                 scNotas.Show(); //Mostramos la ventana del editor de texto.
 
@@ -90,7 +92,7 @@ namespace NoteSchool.Layout {
                     String id = dataGVNotas.CurrentRow.Cells["idnotas"].Value.ToString();
 
                     nota.eliminarNota(id); //Eliminamos la nota.
-
+                    nota.cargarNotas(dataGVNotas);
                 }
 
                 

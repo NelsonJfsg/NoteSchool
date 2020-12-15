@@ -48,7 +48,7 @@ namespace NoteSchool.DataBase {
                 
                 //Guardar el id creado.
                 id = comando.LastInsertedId.ToString();
-
+                
                 //Objetos
                 ScNotas scNotas = new ScNotas();
                 scNotas.setId(id);

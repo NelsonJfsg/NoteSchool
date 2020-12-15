@@ -21,9 +21,16 @@ namespace NoteSchool.Layout.Tarea {
         //Variables
         String id;
         bool tEstado;
+        DataGridView tDGV;
 
         //Objetos
         DataBase.Tarea tarea = new DataBase.Tarea();
+
+        //setDGV
+        public DataGridView setDGV(DataGridView dGV) {
+            tDGV = dGV;
+            return dGV;
+        }
 
         //setId.
         public String setId(String text) {
@@ -58,13 +65,14 @@ namespace NoteSchool.Layout.Tarea {
                 
                 //Crea la nota.
                 tarea.crearTarea(tbTitulo, tbFechaDeEntrega, rtDescripcion, cbEstado);
+                tarea.cargarTarea(tDGV); //Cargamos el horario
                 tEstado = true;
 
             } else {
 
                 //Editamos con el id de la nota antes creada.
                 tarea.editarTarea(id, tbTitulo, tbFechaDeEntrega, rtDescripcion, cbEstado);
-
+                tarea.cargarTarea(tDGV); //Cargamos el horario
             }
 
             //Cerramos la ventana.
