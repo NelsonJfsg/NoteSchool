@@ -113,5 +113,14 @@ namespace NoteSchool.Layout.Inicio {
             ScLogin scLogin = new ScLogin();
             usuario.validarUsuarioExistenteContraseña(this, scLogin, tbUserName, tbPassword);
         }
+
+        //Verificamos que el enter se haya presionado.
+        private void tbPassword_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+            if (e.KeyData == Keys.Enter) {
+                ScLogin scLogin = new ScLogin();
+                usuario.validarUsuarioExistenteContraseña(this, scLogin, tbUserName, tbPassword);
+                tbPassword.Text = "";
+            }
+        }
     }
 }

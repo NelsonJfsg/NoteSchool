@@ -147,5 +147,20 @@ namespace NoteSchool.Layout {
             scResetPassword.Show();
             this.Visible = false;
         }
+
+        //Verificamos que se haya presionado el enter.
+        private void tbPassword_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+
+            if (e.KeyData == Keys.Enter) {
+                //Objetos
+                Usuario usuario = new Usuario();
+                ScHome scHome = new ScHome();
+            
+                //Metodo para validar la contraseña y el usuario.
+                usuario.validarUsuario(this, scHome, tbUserName, tbPassword);
+                tbPassword.Text = "";
+            }
+
+        }
     } 
 }

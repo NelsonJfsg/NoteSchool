@@ -91,6 +91,7 @@ namespace NoteSchool.Layout.Inicio {
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPassword.Click += new System.EventHandler(this.tbPassword_Click);
             this.tbPassword.Leave += new System.EventHandler(this.tbPassword_Leave);
+            this.tbPassword.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tbPassword_PreviewKeyDown);
             // 
             // tbUserName
             // 

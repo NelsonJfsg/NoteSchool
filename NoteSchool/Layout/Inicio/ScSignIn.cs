@@ -129,5 +129,20 @@ namespace NoteSchool.Layout {
 
         }
 
+        //Verificamos si se presiona el enter.
+        private void tbPassword_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e) {
+
+            if (e.KeyData == Keys.Enter) {
+                //Objetos
+                Usuario usario = new Usuario();
+                ScLogin scLogin = new ScLogin();
+
+                //Guardar usuario en la base de datos.
+                usario.validarUsuarioExistente(this, scLogin, tbUserName, tbPassword);
+            
+                tbPassword.Text = "";
+            }
+
+        }
     }
 }
