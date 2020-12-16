@@ -88,6 +88,7 @@ namespace NoteSchool.Layout {
 
         }
 
+        //Evento doble click para abrir el link.
         private void dataGVHorario_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
 
             //Objetos
@@ -96,5 +97,11 @@ namespace NoteSchool.Layout {
             horario.abrirAula(dataGVHorario);
         }
 
+        //Evento para saber si el form se activó.
+        private void ScStart_VisibleChanged(object sender, EventArgs e) {
+            
+            cargarHyT(dataGVTareas, dataGVHorario, cbDia);
+
+        }
     }
 }

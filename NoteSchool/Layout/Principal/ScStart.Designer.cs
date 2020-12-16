@@ -151,6 +151,7 @@
             this.Name = "ScStart";
             this.Text = "ScStart";
             this.Load += new System.EventHandler(this.ScStart_Load);
+            this.VisibleChanged += new System.EventHandler(this.ScStart_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGVHorario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVTareas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();

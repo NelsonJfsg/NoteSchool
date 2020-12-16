@@ -60,19 +60,19 @@ namespace NoteSchool.Layout.Tarea {
         //Metodo para guardar la tarea.
         private void butGuardarTarea_Click_1(object sender, EventArgs e) {
             
-            //Verificamos que el estado sea verdadero para crear la nota.
+            //Verificamos que el estado sea verdadero para crear la tarea.
             if (tEstado != true) {
                 
                 //Crea la nota.
                 tarea.crearTarea(tbTitulo, tbFechaDeEntrega, rtDescripcion, cbEstado);
-                tarea.cargarTarea(tDGV); //Cargamos el horario
+                tarea.cargarTarea(tDGV); //Cargamos la tarea.
                 tEstado = true;
 
             } else {
 
-                //Editamos con el id de la nota antes creada.
+                //Editamos con el id de la tarea antes creada.
                 tarea.editarTarea(id, tbTitulo, tbFechaDeEntrega, rtDescripcion, cbEstado);
-                tarea.cargarTarea(tDGV); //Cargamos el horario
+                tarea.cargarTarea(tDGV); //Cargamos la tarea
             }
 
             //Cerramos la ventana.

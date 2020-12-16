@@ -93,14 +93,14 @@ namespace NoteSchool.Layout.Tarea {
                 //Objetos
                 ScVerTarea scVerTarea = new ScVerTarea();
 
-                //Obtenemos el id de la nota seleccionada.
+                //Obtenemos el id de la tarea seleccionada.
                 String id = dataGVTarea.CurrentRow.Cells["idtareas"].Value.ToString();
                 
                 //Guardamos el id y el estado.
                 scVerTarea.setId(id);
                 scVerTarea.setEstado(true);
                 scVerTarea.setDGV(dataGVTarea);
-                scVerTarea.Show(); //Mostramos la ventana del editor de texto.
+                scVerTarea.Show(); //Mostramos la ventana del editor.
 
             } else {
 
