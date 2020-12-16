@@ -125,6 +125,7 @@
             // 
             // pbActualizar
             // 
+            this.pbActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbActualizar.Image = global::NoteSchool.Properties.Resources.actualizar;
             this.pbActualizar.Location = new System.Drawing.Point(634, 11);
             this.pbActualizar.Name = "pbActualizar";

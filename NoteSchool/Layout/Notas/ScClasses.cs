@@ -11,6 +11,7 @@ using NoteSchool.Layout.Notas;
 using NoteSchool.DataBase;
 
 namespace NoteSchool.Layout {
+
     public partial class ScClasses : Form {
 
         //Codigo para activar el doble buffer
@@ -44,6 +45,7 @@ namespace NoteSchool.Layout {
         private void pbCrearNota_Click(object sender, EventArgs e) {
             
             ScNotas scNotas = new ScNotas();
+
             scNotas.setDGV(dataGVNotas);
             scNotas.Show();
 

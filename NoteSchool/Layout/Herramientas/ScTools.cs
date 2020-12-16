@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NoteSchool.Layout.Herramientas;
 using NoteSchool.Layout.Tools;
 
 namespace NoteSchool.Layout {
@@ -32,6 +33,25 @@ namespace NoteSchool.Layout {
             ScCalculator scCalculator = new ScCalculator();
             scCalculator.Show();
         }
-    
+
+        private void pbTemperatura_Click(object sender, EventArgs e) {
+            ScGrados scGrados = new ScGrados();
+            scGrados.Show();
+        }
+
+        private void pbMoneda_Click(object sender, EventArgs e) {
+            ScMoneda scMoneda = new ScMoneda();
+            scMoneda.Show();
+        }
+
+        private void pbMetros_Click(object sender, EventArgs e) {
+            ScMetros scMetros = new ScMetros();
+            scMetros.Show();
+        }
+
+        private void pbTiempo_Click(object sender, EventArgs e) {
+            ScTiempo scTiempo = new ScTiempo();
+            scTiempo.Show();
+        }
     }
 }

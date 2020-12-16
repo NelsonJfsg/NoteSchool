@@ -65,7 +65,7 @@
             // pbEliminarNota
             // 
             this.pbEliminarNota.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEliminarNota.Image = global::NoteSchool.Properties.Resources.Close;
+            this.pbEliminarNota.Image = global::NoteSchool.Properties.Resources.basura;
             this.pbEliminarNota.Location = new System.Drawing.Point(486, 295);
             this.pbEliminarNota.Name = "pbEliminarNota";
             this.pbEliminarNota.Size = new System.Drawing.Size(164, 142);

@@ -60,10 +60,6 @@ namespace NoteSchool.Layout {
             openAndClose(panel1, scClasses);
         }
 
-        private void lTools_Click(object sender, EventArgs e) {
-            openAndClose(panel1,scTools);
-        }
-
         private void pbInfo_Click(object sender, EventArgs e) {
             openAndClose(panel1, scInfo);
         }
@@ -78,6 +74,30 @@ namespace NoteSchool.Layout {
 
         private void lHorario_Click(object sender, EventArgs e) {
             openAndClose(panel1, scHorario);
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scStart);
+        }
+
+        private void pbNota_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scClasses);
+        }
+
+        private void pbTarea_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scTarea);
+        }
+
+        private void pbHorario_Click(object sender, EventArgs e) {
+            openAndClose(panel1, scHorario);
+        }
+
+        private void pbMaterial_Click(object sender, EventArgs e) {
+            openAndClose(panel1,scTools);
+        }
+
+        private void lMaterial_Click(object sender, EventArgs e) {
+            openAndClose(panel1,scTools);
         }
         //Fin Eventos click.
     }

@@ -56,6 +56,30 @@
     <Compile Include="DataBase\Nota.cs" />
     <Compile Include="DataBase\Tarea.cs" />
     <Compile Include="DataBase\Usuario.cs" />
+    <Compile Include="Layout\Herramientas\ScGrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScGrados.Designer.cs">
+      <DependentUpon>ScGrados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScMetros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScMetros.Designer.cs">
+      <DependentUpon>ScMetros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScTiempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScTiempo.Designer.cs">
+      <DependentUpon>ScTiempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\Herramientas\ScMoneda.Designer.cs">
+      <DependentUpon>ScMoneda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\Horario\ScEditarClase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +177,18 @@
       <DependentUpon>ScVerTarea.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Layout\Herramientas\ScGrados.resx">
+      <DependentUpon>ScGrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Herramientas\ScMetros.resx">
+      <DependentUpon>ScMetros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Herramientas\ScMoneda.resx">
+      <DependentUpon>ScMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\Herramientas\ScTiempo.resx">
+      <DependentUpon>ScTiempo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\Horario\ScEditarClase.resx">
       <DependentUpon>ScEditarClase.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +262,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\NoteSchool - icon.png" />
+    <None Include="Resources\llave-inglesa.png" />
+    <None Include="Resources\hogar.png" />
+    <None Include="Resources\basura.png" />
+    <None Include="Resources\arroba.png" />
+    <None Include="Resources\reloj.png" />
+    <None Include="Resources\taza-de-cafe.png" />
+    <None Include="Resources\regla.png" />
+    <None Include="Resources\termometro.png" />
+    <None Include="Resources\dolar.png" />
     <None Include="Resources\actualizar.png" />
     <None Include="Resources\NoteSchool-logo.png" />
     <None Include="Resources\UserImage.png" />

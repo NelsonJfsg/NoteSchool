@@ -64,7 +64,7 @@ namespace NoteSchool.Layout.Tarea {
             // pbEliminarTarea
             // 
             this.pbEliminarTarea.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEliminarTarea.Image = global::NoteSchool.Properties.Resources.Close;
+            this.pbEliminarTarea.Image = global::NoteSchool.Properties.Resources.basura;
             this.pbEliminarTarea.Location = new System.Drawing.Point(485, 295);
             this.pbEliminarTarea.Name = "pbEliminarTarea";
             this.pbEliminarTarea.Size = new System.Drawing.Size(164, 142);
