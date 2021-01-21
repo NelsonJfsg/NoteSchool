@@ -100,5 +100,6 @@ namespace NoteSchool.Layout {
             openAndClose(panel1,scTools);
         }
         //Fin Eventos click.
+
     }
 }

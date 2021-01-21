@@ -15,7 +15,7 @@ namespace NoteSchool.DataBase {
 
             //Variables
             String userName = tbUserName.Text;
-            String userPassword = tbPassword.Text;
+            String userPassword = Encriptacion.GetSHA256(tbPassword.Text);
 
             //Comando de en que tabla insertar que datos.
             String sql = "INSERT INTO users (userName, userpassword) VALUES ('"+ userName + "', '" + userPassword + "')";
@@ -50,7 +50,7 @@ namespace NoteSchool.DataBase {
             //Variables
             String id;
             String userName = tbUserName.Text;
-            String password = tbPassword.Text;
+            String password = Encriptacion.GetSHA256(tbPassword.Text);
             String bdPassword;
             String bdUserName;
 
@@ -155,7 +155,7 @@ namespace NoteSchool.DataBase {
 
             //Variables
             String user = tbUserName.Text;
-            String password = tbPassword.Text;
+            String password = Encriptacion.GetSHA256(tbPassword.Text);
 
             //Comando de en que tabla insertar que datos.
             String sql = "UPDATE users SET userName= '"+ user + "', userPassword='"+ password + "' WHERE userName='"+ user + "'";

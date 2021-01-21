@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Class\Start.cs" />
     <Compile Include="DataBase\Conexion.cs" />
+    <Compile Include="DataBase\Encriptacion.cs" />
     <Compile Include="DataBase\Horario.cs" />
     <Compile Include="DataBase\Nota.cs" />
     <Compile Include="DataBase\Tarea.cs" />
